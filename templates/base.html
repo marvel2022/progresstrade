@@ -1,0 +1,229 @@
+{% load static %} 
+
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>ProgressTrade.uz</title>
+
+<meta name="title" content="interexpress.uz">
+<link rel="shortcut icon" href="{% static 'img/ico.ico' %}" type="image/x-icon">
+<meta name="description" content="Cамый большой центр">
+<meta name="keywords" content="">
+<meta name="author" content="Zoxidjon Ergashev">
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'fontawesomePremium/css/all.css' %}" />
+<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+<link rel="stylesheet" href="{% static 'css/aos.css' %}">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="{% static 'css/styl.css' %}">
+
+<style>
+  .swiper-container{ 
+    width:100%; 
+    overflow:hidden; 
+    height:63vh;
+  } 
+
+  .swiper-slide{
+    overflow:hidden;
+    width:100%;
+  }
+
+  @media (max-width:576px){ 
+    .swiper-container{
+     height: 35vh;
+   }
+
+ }
+ .cardHover:hover{
+    box-shadow: 0px 0px 3px 0px rgb(123, 131, 133);
+    cursor: pointer;
+ }
+
+  iframe{
+    width: 100%;
+    height: 550px;
+  }
+  @media (max-width:576px){
+    iframe{
+    width: 100%;
+    height: 350px;
+  }
+  }
+
+</style>
+<script>
+  window.replainSettings = { id: '328a1019-cf35-433c-b4f4-0555e0667585' };
+  (function(u){var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=u;
+  var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);
+  })('https://widget.replain.cc/dist/client.js');
+  </script>
+  
+</head>
+<body class="container-fluid pl-md-0 pr-md-0 pl-lg-0 pr-lg-0 pl-xl-0 pr-xl-0">  
+
+<header class="header shop">
+    <div class="topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                    <div class="top-left">
+                        <ul class="list-main pl-0 pl-md-2">
+            <li class="pt-2"><img src="{% static 'img/icons/email.svg' %}" class="mr-1" width="25" alt="">progresstrade.exp@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 text-right pt-2">
+                    <div class="right-content">
+          <ul class="list-main">
+                            <li> 
+                <a href="#" style="padding: 0px 2px 0px 2px;"><img src="{% static 'img/icons/facebook.svg' %}" width="25" height="25" alt=""></a>
+                <a href="https://t.me/lyuminafor" style="padding: 0px 2px 0px 2px;"><img src="{% static 'img/icons/telegram.svg' %}" width="25" height="25" alt=""></a>
+                <a href="#" style="padding: 0px 2px 0px 2px;"><img src="{% static 'img/icons/twitter.svg' %}" width="25" height="25" alt=""></a>
+                <a href="#" style="padding: 0px 2px 0px 2px;"><img src="{% static 'img/icons/youtube.svg' %}" width="25" height="25" alt=""></a>
+                <a href="#" style="padding: 0px 2px 0px 2px;"><img src="{% static 'img/icons/instagram.svg' %}" width="25" height="25" alt=""></a>
+            </li>
+                            <li class="pt-2"><a href="tel:+998998656434" class="font-weight-bold">+998 (94) 655 00 48</a></li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-inner">
+        <div class="container pr-0 pr-0">
+            <div class="cat-nav-head">
+                <div class="row">
+        <div class="col-lg-3 pt-2"><a href="/" class="cat-heading"><img src="{% static 'img/logo2.png' %}" width="140" alt=""></a></div>
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 pl-0 pr-0">
+                            <nav class="navbar navbar-expand-lg pr-lg-0 pr-xl-0">
+                                <div class="navbar-collapse">	
+                                    <div class="nav-inner">	
+                  <ul class="nav main-menu menu navbar-nav">
+                        <li class="active"><a href="/">ГЛАВНАЯ</a></li>
+                        <li><a href="#!">Компании<i class="ti-angle-down"></i></a>
+                          <ul class="dropdown">
+                              <li style="list-style-type: none;"><a href="{% url 'about' %}">О НАС</a></li>
+                              <li style="list-style-type: none;"><a href="{% url 'manufacturer' %}">Производители</a></li>
+                              <li style="list-style-type: none;"><a href="{% url 'buyer' %}">Покупатели</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="#!">ПРОДУКЦИЯ</a>
+                        <ul class="dropdown">
+                            <li style="list-style-type: none;"><a href="{% url 'catalog-construction' %}">Строительные материалы</a></li>
+                            <li style="list-style-type: none;"><a href="{% url 'catalog_food' %}">Продукты питания</a></li>
+                            <li style="list-style-type: none;"><a href="{% url 'product_text' %}">Текстильные изделия</a></li>
+                        </ul>
+                    </li>				
+                    <li><a href="{% url 'how-to-by' %}" class="text-uppercase">логистика</a></li>				
+                    <li><a href="{% url 'contact' %}">КОНТАКТЫ</a></li>
+                  </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</header> 
+
+
+{% block content %} 
+
+
+
+
+{% endblock content %} 
+
+
+<footer class="container-fluid border-top">
+    <div class="container pl-0 pr-0 pt-5 pb-3">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
+              <h5 style="font-weight: bold; font-size: 25px; color: #000000;"><img src="{% static 'img/logo.png' %}" width="120" class="m-auto" alt=""></h5>
+              <h6 style="font-size: 15px; text-align: left; padding-top: 15px; line-height: 25px; color: #5b6c8f;">город Ташкент, <br> Мирзо-Улуғбекский район, <br> Ц-1, улица Ўзбекистон овози. д-21</h6>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              <h5 style="font-weight: bold; font-size: 20px; color: #000000;">Телефон поддержки</h5>
+              <h5 style="font-size: 22px; font-weight: bold;"><img src="{% static 'img/icons/phoneBlack.svg' %}" width="30" alt=""> +998 (90) 176-00-05</h5>
+              <span class="pl-5" style="font-size: 14px; line-height: 25px; color: #5b6c8f;">Каждый день с 8:00--21:00</span>
+              <hr>
+              <h6 style="font-size: 15px; padding-top: 15px; line-height: 25px; color: #5b6c8f;"> <img src="{% static 'img/icons/email.png' %}" width="25" style="margin-right: 8px;" alt="">progresstrade.exp@gmail.com</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pl-2 pl-md-5">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+              <h5 style="font-weight: bold; font-size: 22px;">Компания</h5>
+              <h6 style="font-size: 14px;" class="colortext pl-1">О компании</h6>
+              <h6 style="font-size: 14px;" class="colortext pl-1">Новости</h6>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+              <h5 style="font-weight: bold; font-size: 22px;">Помощь</h5>
+              <h6 style="font-size: 14px;" class="colortext pl-1">Как купить</h6>
+              <h6 style="font-size: 14px;" class="colortext pl-1">Условия оплаты</h6>
+              <h6 style="font-size: 14px;" class="colortext pl-1">Условия доставки</h6>
+              <h6 style="font-size: 14px;" class="colortext pl-1">Гарантия на товар</h6>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+              <h5 style="font-weight: bold;">Информация</h5>
+              <h6 class="colortext pl-1">Бренды</h6>
+              <h6 class="colortext pl-1">Вопросы и ответы</h6>
+              <h6 class="colortext pl-1">Советы</h6>
+              <h6 class="colortext pl-1">Поставщикам</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-3 text-center">
+          <small>© 2022 <a href="http://myweb.uz/" class="text-dark">myweb.uz.</a> Все права защищены.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+  <button class="btn btn-top" title="Прокрутка вверх"><i class="fa fa-angle-up"></i></button>
+  
+  
+  <!-- JS -->
+  <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="{% static 'js/wow.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script defer src="{% static 'fontawesomePremium/js/all.js' %}"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="{% static 'js/jquery.carousel.js' %}"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper-container',{
+      speed: 1000,
+      spaceBetween: 0,
+      grabCursor:true,
+      autoplay:{
+        autoplay:true,
+        delay:4000,                             
+        disableOnInteraction:false         
+      }                       
+    });
+    new WOW().init();
+    AOS.init();
+  </script>
+  </body>
+  </html>
+  
+
+
+

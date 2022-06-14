@@ -1,0 +1,314 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+
+{% block content %} 
+ 
+   <div class="swiper-container">
+    <div class="swiper-wrapper" >  
+      <div class="swiper-slide header12 pt-0" style="background-image: url('static/img/bg/h7.jpg'); background-size: cover; background-repeat: no-repeat;">
+        
+          <div class="carousel-caption pt-0 text-left"> 
+            <h1 class="font1">Изготовление на заказ <br> в Узбекистане</h1>
+          </div>
+      </div>
+       <div class="swiper-slide header12" style="background-image: url('static/img/bg/header.webp'); background-size: cover; background-repeat: no-repeat;">
+        <div class="carousel-caption text-left"> 
+          <h1 class="font1">Изготовление на заказ <br> в Узбекистане</h1>
+        </div>
+      </div> 
+       <div class="swiper-slide header12" style="background-image: url('static/img/bg/header2.jpg'); background-size: cover; background-repeat: no-repeat;">
+        <div class="carousel-caption text-left"> 
+          <h1 class="font1">Текстильная продукция <br> в Узбекистане</h1>
+        </div>
+      </div> 
+    </div>
+  </div>  
+
+
+  <section class="container-fluid pl-0 pr-0" style="background-image: url('static/img/bg/aboutus.png'); background-size: cover; overflow: hidden;">
+    <div class="container ">
+      <div class="row pt-5 pb-5">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <h2 class="font-weight-bold text-dark">О НАС</h2>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 wow slideInLeft">
+          <img src="{% static 'img/bg/bg0.jpg' %}" width="80%" height="350" alt="about company image" >
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 wow slideInRight">
+          <h6 class="pb-3 pt-3 font-weight-normal text-justify text-dark">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis iure qui doloribus suscipit dolorem odio distinctio commodi, voluptatibus nostrum? Ipsam blanditiis, repudiandae officia odio neque a voluptate quidem sed quisquam?.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis iure qui doloribus suscipit dolorem odio distinctio commodi, voluptatibus nostrum? Ipsam blanditiis, repudiandae officia odio neque a voluptate quidem sed quisquam?.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis iure qui doloribus suscipit dolorem odio distinctio commodi, voluptatibus nostrum? Ipsam blanditiis, repudiandae officia odio neque a voluptate quidem sed quisquam?.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis iure qui doloribus suscipit dolorem odio distinctio commodi, voluptatibus nostrum? Ipsam blanditiis, repudiandae officia odio neque a voluptate quidem sed quisquam?.
+          </h6>
+          <h4 class="text-right"><a href="{% url 'about' %}" class="btn text-dark" style="border: 3px solid #ddd; border-radius: 25px;">Подробнее</a></h4>
+        </div>
+     
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="container-fluid bg-trasparent my-4 p-3" style="border-top: 2px solid #b6b6b6; background-image: url('static/img/brush_PNG7373.png'); background-size: contain; background-repeat: no-repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center pb-2">
+        <h3 class="font-weight-bold pt-4" style="color: #000000;">Новинки</h3>
+        </div>
+      </div>
+      <div class="row pt-2">				
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card"> <img src="{% static 'img/products/1.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> 14.00 $</span>
+            <h5 class="card-title pt-2">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card h-100 shadow-sm"> <img src="{% static 'img/products/2.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> 18.00 $</span>
+            <h5 class="card-title pt-2">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card h-100 shadow-sm"> <img src="{% static 'img/products/3.png' %}" class="card-img-top" alt="...">
+            <div class="label-top shadow-sm">New</div>
+            <div class="card-body">
+              <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> 4.00 $</span>
+            <h5 class="card-title pt-2">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card h-100 shadow-sm"> <img src="{% static 'img/products/4.png' %}" class="card-img-top" alt="...">
+            <div class="label-top shadow-sm">new</div>
+            <div class="card-body">
+              <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> 9.00 $</span>
+            <h5 class="card-title pt-2">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card h-100 shadow-sm"> <img src="{% static 'img/products/w12.jpg' %}" class="card-img-top" alt="...">
+            <div class="label-top shadow-sm">new</div>
+            <div class="card-body">
+              <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> 8.00 $</span>
+            <h5 class="card-title pt-2">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card h-100 shadow-sm"> <img src="{% static 'img/products/w3.webp' %}" class="card-img-top" alt="...">
+            <div class="label-top shadow-sm">new</div>
+            <div class="card-body">
+              <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> 28.00 $</span>
+            <h5 class="card-title pt-2">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card h-100 shadow-sm"> <img src="{% static 'img/products/w11.webp' %}" class="card-img-top" alt="...">
+            <div class="label-top shadow-sm">new</div>
+            <div class="card-body">
+              <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> 34.00 $</span>
+             <h5 class="card-title pt-2">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card h-100 shadow-sm"> <img src="{% static 'img/products/w4.webp' %}" class="card-img-top" alt="...">
+            <div class="label-top shadow-sm">new</div>
+            <div class="card-body">
+              <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> 34.00 $</span>
+             <h5 class="card-title pt-2">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- 
+  Коннектинг
+
+  Коннектинг  (icons)
+  сформирования заявки + логистика -->
+
+  <section class="container-fluid pl-0 pr-0" style="background-color: #5b6c8f;  background-size: contain;">
+    <div class="container-fluid pl-0 pr-0 pt-3 pb-3" style="background-color: rgba(0,0,0,0.6); color: #ffffff;">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="pt-5">Как мы работаем</h2>
+          </div>
+        </div>
+      </div>
+  <div class="container pb-5" style="position: relative;">
+    <h3 class="">Производители</h3>
+    <div class="row pl-3 pr-3">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 p-2">
+        <div class="media border p-2">
+          <h1 class="mt-2 ml-2" style="width: 80px; height: 80px; color: white; font-size: 100xp; padding-top: 10px; padding-bottom: 10px; text-align: center; border: 1px solid #fff;">1</h1>
+          <div class="media-body pl-3 pt-2 pb-2">
+            <h6 class=" font-weight-normal pt-4">Коннектинг</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 p-2">
+        <div class="media border p-2">
+          <h1 class="mt-2 ml-2" style="width: 80px; height: 80px; color: white; font-size: 100xp; padding-top: 10px; padding-bottom: 10px; text-align: center; border: 1px solid #fff;">2</h1>
+          <div class="media-body pl-3 pt-2 pb-2">
+            <h6 class=" font-weight-normal pt-2">Ознакомления с производсвом</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 p-2">
+        <div class="media border p-2">
+          <h1 class="mt-2 ml-2" style="width: 80px; height: 80px; color: white; font-size: 100xp; padding-top: 10px; padding-bottom: 10px; text-align: center; border: 1px solid #fff;">3</h1>
+          <div class="media-body pl-3 pt-2 pb-2">
+            <h6 class=" font-weight-normal pt-4">Договор</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 class="pt-5">Покупатель</h3>
+    <div class="row pl-3 pr-3">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 p-2">
+        <div class="media border p-2">
+          <h1 class="mt-2 ml-2" style="width: 80px; height: 80px; color: white; font-size: 100xp; padding-top: 10px; padding-bottom: 10px; text-align: center; border: 1px solid #fff;">1</h1>
+          <div class="media-body pl-3 pt-2 pb-2">
+            <h6 class=" font-weight-normal pt-4">Коннектинг</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 p-2">
+        <div class="media border p-2">
+          <h1 class="mt-2 ml-2" style="width: 80px; height: 80px; color: white; font-size: 100xp; padding-top: 10px; padding-bottom: 10px; text-align: center; border: 1px solid #fff;">2</h1>
+          <div class="media-body pl-3 pt-2 pb-2">
+            <h6 class=" font-weight-normal pt-3">Сформирования заявки + логистика</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 p-2">
+        <div class="media border p-2">
+          <h1 class="mt-2 ml-2" style="width: 80px; height: 80px; color: white; font-size: 100xp; padding-top: 10px; padding-bottom: 10px; text-align: center; border: 1px solid #fff;">3</h1>
+          <div class="media-body pl-3 pt-2 pb-2">
+            <h6 class=" font-weight-normal pt-4">Контракт</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+ 
+
+  <section class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+        <h3 class="font-weight-bold pb-0 pt-5" style="color: #000000;">Популярные</h3>
+        </div>
+      </div>
+      <div class="row">				
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card"> <img src="{% static 'img/products/w1.jpg' %}" width="100$" height="250" class="card-img-top" alt="...">
+            <div class="card-body">
+              <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> 14.00 $</span>
+              <h5 class="card-title h6 pt-2">Колбаса варёная "FAVORITE" "Для Завтрака"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card"> <img src="{% static 'img/products/w2.jpg' %}" width="100$" height="250" class="card-img-top" alt="...">
+            <div class="card-body">
+              <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> 14.00 $</span>
+              <h5 class="card-title h6 pt-2">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card"> <img src="{% static 'img/products/w3.webp' %}" width="100$" height="250" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="clearfix mb-3"> <span class="float-start" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;">12354.00€</span> </div>
+              <h5 class="card-title h6">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card h-100 shadow-sm"> <img src="{% static 'img/products/4.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="clearfix mb-3"> <span class="float-start" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;">12354.00€</span> </div>
+              <h5 class="card-title h6">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card h-100 shadow-sm"> <img src="{% static 'img/products/w12.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="clearfix mb-3"> <span class="float-start" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;">12354.00€</span> </div>
+              <h5 class="card-title h6">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card h-100 shadow-sm"> <img src="{% static 'img/products/w3.webp' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="clearfix mb-3"> <span class="float-start" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;">12354.00€</span> </div>
+              <h5 class="card-title h6">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card h-100 shadow-sm"> <img src="{% static 'img/products/w11.webp' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="clearfix mb-3"> <span class="float-start" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;">12354.00€</span> </div>
+              <h5 class="card-title h6">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card h-100 shadow-sm"> <img src="{% static 'img/products/w4.webp' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="clearfix mb-3"> <span class="float-start" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;">12354.00€</span> </div>
+              <h5 class="card-title h6">Сосиски "FAVORITE" "Молочные"</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section class="container-fluid p-3" id="contact_section">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2119.11553154305!2d69.28948492889067!3d41.311432204211755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef5c20fb299af%3A0xc3466f7ee8e78cc0!2sprogresstrade!5e0!3m2!1sru!2s!4v1652528406609!5m2!1sru!2s"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>   
+
+{% endblock content %} 
+
