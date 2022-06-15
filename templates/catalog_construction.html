@@ -4,7 +4,7 @@
 
 {% block content %} 
 
-  <section class="container-fluid pl-0 pr-0" style="background-image: url(img/bg/w7.jpg); background-size: cover;">
+  <section class="container-fluid pl-0 pr-0" style="background-image: url('{% static 'img/bg/w7.jpg' %}'); background-size: cover;">
     <div class="container-fluid" style="background-color:rgba(0,0,0,0.5);">
       <div class="container pt-5 pb-5">
         <div class="row pt-5 pb-5">
@@ -24,43 +24,18 @@
     <div class="row">
       <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 pt-3 mt-2 border">
         <ul class="list-unstyled p-0 category_ul">
+          
           <li class="p-2" style="background-color: rgb(228, 228, 228);">Все</li>
-          <li class="p-2">Мясные </li>
-          <li class="p-2">Мясосодержащие </li>
-          <li class="p-2">Докторскую</li>
-          <li class="p-2">Столичную</li>
-          <li class="p-2">Краснодарскую</li>
-          <li class="p-2">Любительскую</li>
-          <li class="p-2">Телячью</li>
-          <li class="p-2">Колбаса 8</li>
-          <li class="p-2">Колбаса 9</li>
-          <li class="p-2">Колбаса 10</li>
-          <li class="p-2">Колбаса 11</li>
-          <li class="p-2">Колбаса 12</li>
-          <li class="p-2">Колбаса 13</li>
+          {% for category in categories %}
+          <li class="p-2" ><a href="/catalog?category={{category.id}}">{{category.name}}</a> </li>
+          {% endfor %}
+          
         </ul>
         <ul class="list-unstyled category_ul p-0">
           <li class="p-2" style="background-color: rgb(228, 228, 228);">Компании</li>
-          <li class="p-2">Favorite food group</li>
-          <li class="p-2">To'xtaniyoz Ota</li>
-          <li class="p-2">Navro'z</li>
-          <li class="p-2">Salom</li>
-          <li class="p-2">Makiz</li>
-          <li class="p-2">Sag'bon</li>
-          <li class="p-2">Foodmaxx</li>
-          <li class="p-2">Exclusive</li>
-          <li class="p-2">Zarhal</li>
-          <li class="p-2">Nazif</li>
-          <li class="p-2">Delmark</li>
-          <li class="p-2">Appetito</li>
-          <li class="p-2">Alsafi</li>
-          <li class="p-2">Sladus</li>
-          <li class="p-2">Sherin</li>
-          <li class="p-2">Musa</li>
-          <li class="p-2">Tanho</li>
-
-
-
+          {% for seller in sellers %}
+          <li class="p-2">{{ seller.name }}</li>
+          {% endfor %}
         </ul>
       </div>
       <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-xl-9">
@@ -87,84 +62,15 @@
               </tr>
               </thead>
               <tbody>
+                {% for product in products %}
               <tr>
-                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">A3 (320*450sm)</td>
-                <td data-label="Ед. изм">200 gr</td>
-                <td data-label="Масса за 1 шт">300 gr</td>
-                <td data-label="Цена 1 пачки (в долл.США)">100 шт</td>
+                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">{{product.name}}</td>
+                <td data-label="Ед. изм">{{ product.measurement_type }}</td>
+                <td data-label="Масса за 1 шт">{{product.mass}}</td>
+                <td data-label="Цена 1 пачки (в долл.США)">{{product.price}}</td>
               </tr>
-              <tr>
-                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">A3 (320*450sm)</td>
-                <td data-label="Ед. изм">200 gr</td>
-                <td data-label="Масса за 1 шт">300 gr</td>
-                <td data-label="Цена 1 пачки (в долл.США)">100 шт</td>
-              </tr>
-              <tr>
-                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">A3 (320*450sm)</td>
-                <td data-label="Ед. изм">200 gr</td>
-                <td data-label="Масса за 1 шт">300 gr</td>
-                <td data-label="Цена 1 пачки (в долл.США)">100 шт</td>
-              </tr>
-              <tr>
-                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">A3 (320*450sm)</td>
-                <td data-label="Ед. изм">200 gr</td>
-                <td data-label="Масса за 1 шт">300 gr</td>
-                <td data-label="Цена 1 пачки (в долл.США)">100 шт</td>
-              </tr>
-              <tr>
-                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">A3 (320*450sm)</td>
-                <td data-label="Ед. изм">200 gr</td>
-                <td data-label="Масса за 1 шт">300 gr</td>
-                <td data-label="Цена 1 пачки (в долл.США)">100 шт</td>
-              </tr>
-              <tr>
-                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">A3 (320*450sm)</td>
-                <td data-label="Ед. изм">200 gr</td>
-                <td data-label="Масса за 1 шт">300 gr</td>
-                <td data-label="Цена 1 пачки (в долл.США)">100 шт</td>
-              </tr>
-              <tr>
-                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">A3 (320*450sm)</td>
-                <td data-label="Ед. изм">200 gr</td>
-                <td data-label="Масса за 1 шт">300 gr</td>
-                <td data-label="Цена 1 пачки (в долл.США)">100 шт</td>
-              </tr>
-              <tr>
-                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">A3 (320*450sm)</td>
-                <td data-label="Ед. изм">200 gr</td>
-                <td data-label="Масса за 1 шт">300 gr</td>
-                <td data-label="Цена 1 пачки (в долл.США)">100 шт</td>
-              </tr>
-              <tr>
-                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">A3 (320*450sm)</td>
-                <td data-label="Ед. изм">200 gr</td>
-                <td data-label="Масса за 1 шт">300 gr</td>
-                <td data-label="Цена 1 пачки (в долл.США)">100 шт</td>
-              </tr>
-              <tr>
-                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">A3 (320*450sm)</td>
-                <td data-label="Ед. изм">200 gr</td>
-                <td data-label="Масса за 1 шт">300 gr</td>
-                <td data-label="Цена 1 пачки (в долл.США)">100 шт</td>
-              </tr>
-              <tr>
-                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">A3 (320*450sm)</td>
-                <td data-label="Ед. изм">200 gr</td>
-                <td data-label="Масса за 1 шт">300 gr</td>
-                <td data-label="Цена 1 пачки (в долл.США)">100 шт</td>
-              </tr>
-              <tr>
-                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">A3 (320*450sm)</td>
-                <td data-label="Ед. изм">200 gr</td>
-                <td data-label="Масса за 1 шт">300 gr</td>
-                <td data-label="Цена 1 пачки (в долл.США)">100 шт</td>
-              </tr>
-              <tr>
-                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">A3 (320*450sm)</td>
-                <td data-label="Ед. изм">200 gr</td>
-                <td data-label="Масса за 1 шт">300 gr</td>
-                <td data-label="Цена 1 пачки (в долл.США)">100 шт</td>
-              </tr>
+              {% endfor %}
+              
               
               </tbody>
             </table>
@@ -214,47 +120,19 @@
       <h3 class="font-weight-bold pb-2 pt-4" style="color: #000000;">Новинки</h3>
       </div>
     </div>
-    <div class="row">				
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
-        <div class="card"> <img src="img/products/w1.jpg" class="card-img-top" alt="...">
-          <div class="label-top shadow-sm">New</div>
-          <div class="card-body">
-            <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> 14.00 $</span>
-          <h5 class="card-title pt-2">Сосиски "FAVORITE" "Молочные"</h5>
-            <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+    <div class="row">	
+      {% for product in new_products %}		
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+          <div class="card"> <img src="{{ product.image.url }}" class="card-img-top" alt="...">
+            {% if product.type %} <div class="label-top shadow-sm">new</div> {% endif  %}
+            <div class="card-body">
+              <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;">{{product.price}}{% if product.price_type == 'DOL' %} $ {% endif %}</span>
+            <h5 class="card-title pt-2">{{ product.name }}</h5>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
-        <div class="card h-100 shadow-sm"> <img src="img/products/w10.jpg" class="card-img-top" alt="...">
-          <div class="label-top shadow-sm">New</div>
-          <div class="card-body">
-            <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> 18.00 $</span>
-          <h5 class="card-title pt-2">Сосиски "FAVORITE" "Молочные"</h5>
-            <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
-        <div class="card h-100 shadow-sm"> <img src="img/products/w12.jpg" class="card-img-top" alt="...">
-          <div class="label-top shadow-sm">New</div>
-          <div class="card-body">
-            <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> 4.00 $</span>
-          <h5 class="card-title pt-2">Сосиски "FAVORITE" "Молочные"</h5>
-            <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
-        <div class="card h-100 shadow-sm"> <img src="img/products/w2.jpg" class="card-img-top" alt="...">
-          <div class="label-top shadow-sm">new</div>
-          <div class="card-body">
-            <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> 9.00 $</span>
-          <h5 class="card-title pt-2">Сосиски "FAVORITE" "Молочные"</h5>
-            <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
-          </div>
-        </div>
-      </div>
+        {% endfor %}
     </div>
   </div>
 </section>

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %} 
+
+  <section class="container-fluid pl-0 pr-0" style="background-color: #1A5DA6; border-top: 1px solid #ffffff; background-size: cover;">
+    <div class="container">
+      <div class="row pt-3">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+          <h2 class="text-white font-weight-bold pb-2">Покупатели</h2>
+      </div>
+      </div>
+    </div>
+  </section> 
+
+<section class="container-fluid pb-5">
+<div class="container p-0" style="line-height: 35px;">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0 p-lg-5">
+            <p class="text-justify font-weight-normal h5" >
+              Торговая компания Колбасный мир - официальный дистрибьютор колбасной и мясной продукции. Она была основана в 1997 году, с тех пор успешно развивается и расширяет свой ассортиментный перечень, чтобы иметь возможность удовлетворить потребности самого взыскательного клиента.
+Наши клиенты заключают всего 1 договор и получают продукцию от 40 известных мясокомбинатов в одном месте. Что существенно уменьшает время от заказа до получения всей интересующей продукции, а также уменьшает документооборот.
+            </p>
+        </div>
+        {% for customer in customers %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 p-2 text-center">
+          <a href="{% url 'customer_detail' customer.pk %}">
+            <div class="card p-2 text-center" style="height: 230px;">
+            <img src="{{ customer.image.url }}" width="90%" height="100%" class="m-auto" alt="">
+          </div>
+          </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</section>
+
+
+{% endblock content %} 
