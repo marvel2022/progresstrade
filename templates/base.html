@@ -108,23 +108,23 @@
                                 <div class="navbar-collapse">	
                                     <div class="nav-inner">	
                   <ul class="nav main-menu menu navbar-nav">
-                        <li class="active"><a href="/">ГЛАВНАЯ</a></li>
-                        <li><a href="#!">Компании<i class="ti-angle-down"></i></a>
+                        <li {% if request.resolver_match.url_name == 'home' %}class="active"{% endif %}><a href="/">ГЛАВНАЯ</a></li>
+                        <li {% if request.resolver_match.url_name == 'about' or request.resolver_match.url_name == 'sellers' or request.resolver_match.url_name == 'customers' %}class="active"{% endif %}><a href="#!">Компании<i class="ti-angle-down"></i></a>
                           <ul class="dropdown">
                               <li style="list-style-type: none;"><a href="{% url 'about' %}">О НАС</a></li>
                               <li style="list-style-type: none;"><a href="{% url 'sellers' %}">Производители</a></li>
                               <li style="list-style-type: none;"><a href="{% url 'customers' %}">Покупатели</a></li>
                           </ul>
                       </li>
-                      <li><a href="#!">ПРОДУКЦИЯ</a>
+                      <li {% if request.resolver_match.url_name == 'catalog-construction' or  request.resolver_match.url_name == 'catalog_food' or request.resolver_match.url_name == 'product_text' %}class="active"{% endif %}><a href="#!">ПРОДУКЦИЯ</a>
                         <ul class="dropdown">
                             <li style="list-style-type: none;"><a href="{% url 'catalog-construction' %}">Строительные материалы</a></li>
                             <li style="list-style-type: none;"><a href="{% url 'catalog_food' %}">Продукты питания</a></li>
                             <li style="list-style-type: none;"><a href="{% url 'product_text' %}">Текстильные изделия</a></li>
                         </ul>
                     </li>				
-                    <li><a href="{% url 'how-to-by' %}" class="text-uppercase">логистика</a></li>				
-                    <li><a href="{% url 'contact' %}">КОНТАКТЫ</a></li>
+                    <li {% if request.resolver_match.url_name == 'how-to-by' %}class="active"{% endif %}><a href="{% url 'how-to-by' %}" class="text-uppercase">логистика</a></li>				
+                    <li {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}><a href="{% url 'contact' %}">КОНТАКТЫ</a></li>
                   </ul>
                                     </div>
                                 </div>

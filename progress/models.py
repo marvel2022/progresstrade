@@ -1,3 +1,4 @@
+from pyexpat import model
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from mptt.models import MPTTModel, TreeForeignKey, TreeManager
@@ -48,18 +49,18 @@ class Product(DateTimeMixin):
         EUR = 'EUR', _('Eur',)
         RUBLE = 'RUB', _('Ruble',)
 
-    category = models.ForeignKey('Category', on_delete=models.CASCADE, related_name='products')
-    name = models.CharField(_('Имя'), max_length=100)
-    seller = models.ForeignKey('Seller', on_delete=models.CASCADE, related_name='products')
-    image = models.ImageField(_('Изображение'), upload_to = 'product-images')
-    price_type = models.CharField(_('Тип цены'), max_length=64, choices=Price_Type.choices)
-    code = models.CharField(_('ИД(Code)'), max_length=64)
-    measurement_type = models.CharField(_('Тип измерения'), max_length=64)
-    mass = models.CharField(_('Масса за 1 шт'), max_length=64)
-    all_mass = models.CharField(_('Вес 1 коробки'),max_length=64) 
-    price  = models.FloatField(_('Цена'))
-    slug = models.SlugField(_('Slug'), max_length=100)
-    description = models.TextField(_('Описание'))
+    category = models.ForeignKey('Category', on_delete=models.SET_NULL, related_name='products',null=True, blank=True)
+    name = models.CharField(_('Имя'), max_length=100, null=True, blank=True)
+    seller = models.ForeignKey('Seller', on_delete=models.SET_NULL, related_name='products',null=True, blank=True)
+    image = models.ImageField(_('Изображение'), upload_to = 'product-images',null=True, blank=True)
+    price_type = models.CharField(_('Тип цены'), max_length=64, choices=Price_Type.choices,null=True, blank=True)
+    code = models.CharField(_('ИД(Code)'), max_length=64,null=True, blank=True)
+    measurement_type = models.CharField(_('Тип измерения'), max_length=64,null=True, blank=True)
+    mass = models.CharField(_('Масса за 1 шт'), max_length=64,null=True, blank=True)
+    all_mass = models.CharField(_('Вес 1 коробки'),max_length=64,null=True, blank=True) 
+    price  = models.FloatField(_('Цена'),null=True, blank=True)
+    slug = models.SlugField(_('Slug'), max_length=100,null=True, blank=True)
+    description = models.TextField(_('Описание'),null=True, blank=True)
     type = models.CharField(_('Тип'), choices=Product_Type.choices, max_length=64, null=True, blank=True)
     title = models.CharField(max_length = 200, null=True,blank=True)
     value = models.CharField(max_length = 100,null=True,blank=True)
@@ -148,3 +149,17 @@ class Logistic(DateTimeMixin):
         verbose_name = _('Логистика')
         verbose_name_plural = _('Логистика')
 
+
+class FileModel(DateTimeMixin):
+    upload = models.FileField(upload_to='products_informations_files')
+
+    def __str__(self):
+        return str(self.id)
+
+
+
+class PriceExcelModel(DateTimeMixin):
+    upload = models.FileField(upload_to="price_excel")
+
+    def __str__(self):
+        return str(self.id)

@@ -47,7 +47,7 @@
       </div>
       <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-xl-9">
         <div class="row">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-2 text-right">
+          <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-2 text-right">
             <small>Сортировка:</small>  
             <select class="pl-3 pr-3 pt-1 pb-1" name="" id="" style="border:1px solid #cccccc; font-size: 14px;">
                 <option style="font-size: 14px;" class="mt-2" value="">По сену</option>
@@ -55,7 +55,7 @@
                 <option style="font-size: 14px;" class="mt-2" value="">По новинки</option>
               </select>
           </div>
-
+ -->
 
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-2 text-right">
 
@@ -82,7 +82,7 @@
               </tbody>
             </table>
             
-              <a class="btn btn-success btn-sm pl-3 pr-3 mt-3" href="{% url 'export-excel' %}" >Export excel</a>
+              <a class="btn btn-success btn-sm pl-3 pr-3 mt-3" href="{% url 'export-excel' %}?category={{cat_id}}" >Export excel</a>
           </div>
      
        </div>
@@ -101,7 +101,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title" id="productmodalTitle">Календарь</h5>
+      <h5 class="modal-title" id="productmodalTitle">{{i.name}}</h5>
       <button type="button" class="btn btn-sm btn-outline-danger" data-dismiss="modal">Закрыть</button>
     </div>
     <div class="modal-body">

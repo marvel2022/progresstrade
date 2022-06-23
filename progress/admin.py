@@ -1,15 +1,24 @@
 
 from django.contrib.auth.models import Group, User
 from django.contrib import admin
-from progress.models import HomeImage, Category, Certificate, Product, Gallery, Seller, Customer, Logistic
+from progress.models import FileModel, HomeImage, Category, Certificate,PriceExcelModel, Product, Gallery, Seller, Customer, Logistic
+from import_export.admin import ImportExportModelAdmin
+from mptt.admin import MPTTModelAdmin
+from mptt.forms import MPTTAdminForm
+
+class CategoryAdminForm(MPTTAdminForm):
+    pass
+
+
+
 
 @admin.register(HomeImage)
 class HomeImageAdmin(admin.ModelAdmin):
     pass
 
 @admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
-    pass
+class CategoryAdmin(MPTTModelAdmin):
+    form = CategoryAdminForm
 
 @admin.register(Seller)
 class SellerAdmin(admin.ModelAdmin):
@@ -24,6 +33,8 @@ class CustomerAdmin(admin.ModelAdmin):
 class LogisticAdmin(admin.ModelAdmin):
     pass
 
+class ProductAdmin(ImportExportModelAdmin):
+    list_display = ('name', 'code', 'mass', 'all_mass','price')
 admin.site.register(Product)
 
 admin.site.register(Certificate)
@@ -33,3 +44,6 @@ admin.site.register(Gallery)
 
 admin.site.unregister(Group)
 admin.site.unregister(User)
+
+admin.site.register(FileModel)
+admin.site.register(PriceExcelModel)

@@ -15,6 +15,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'progress',
+    'import_export',
+    'mptt',
 ]
 
 MIDDLEWARE = [

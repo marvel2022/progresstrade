@@ -52,7 +52,8 @@
         {% for product in products %}		
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
           <div class="card"> <img src="{{ product.image.url }}" class="card-img-top" alt="...">
-            {% if product.type %} <div class="label-top shadow-sm">new</div> {% endif  %}
+            {% if product.type == 'NEW' %} <div class="label-top shadow-sm">new</div> {% endif  %}
+            
             <div class="card-body">
               <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;">{{product.price}}{% if product.price_type == 'DOL' %} $ {% endif %}</span>
             <h5 class="card-title pt-2">{{ product.name }}</h5>
@@ -152,6 +153,7 @@
         {% for pop_pro in popular_products %}
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
           <div class="card"> <img src="{{ pop_pro.image.url }}" width="100$" height="250" class="card-img-top" alt="...">
+            {% if pop_pro.type == 'POP' %} <div class="label-top shadow-sm">popular</div> {% endif %}
             <div class="card-body">
               <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> {{product.price}}{% if product.price_type == 'DOL' %} $ {% endif %}</span>
               <h5 class="card-title h6 pt-2">{{pop_pro.name}}</h5>
