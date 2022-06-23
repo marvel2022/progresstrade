@@ -196,11 +196,9 @@ class HowToByView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['logistics_price'] = self.queryset.filter(id=self.request.GET.get('logistics',None)).last()
-        
-        print(f"get ------> {self.request.GET.get('logistics',None)}")
-        print(f"post -------> {self.request.POST['logistics1']}")
-        if self.request.POST:
-            context['current_name'] = int(self.request.POST['logistics1'])
+        print(self.request.GET.get('logistics',None))
+        context['current_name'] = self.request.GET.get('logistics',None)
+        print(context['current_name'])
         return context
 
 

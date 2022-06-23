@@ -178,7 +178,7 @@
           <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
             <h5 class="text-white pl-3">Куда</h5>
             <form action="{% url 'how-to-by' %}">
-              <select name="logistics1" style="width: 100%; padding: 5px 35px 5px 35px;">
+              <select name="logistics" style="width: 100%; padding: 5px 35px 5px 35px;">
                 {% for city in logistics %}
                 <option class="h5 font-weight-bold" value="{{city.id}}" {% if city.id == current_name  %} selected {% endif %}>{{city.place_name }}</option>
                 {% endfor %}
