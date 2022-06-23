@@ -177,17 +177,19 @@
           </div>
           <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
             <h5 class="text-white pl-3">Куда</h5>
-            <select style="width: 100%; padding: 5px 35px 5px 35px;">
-              {% for city in logistics %}
-              <option class="h5 font-weight-bold" value="{{city.id}}"> <a  href="/how-to-by/?city={{city.place_name}}">{{ city.place_name }}</a> </option>
-              {% endfor %}
-              
-            </select>
-            <button type="submit" value="search">search</button>
+            <form action="{% url 'how-to-by' %}">
+              <select name="logistics1" style="width: 100%; padding: 5px 35px 5px 35px;">
+                {% for city in logistics %}
+                <option class="h5 font-weight-bold" value="{{city.id}}" {% if city.id == current_name  %} selected {% endif %}>{{city.place_name }}</option>
+                {% endfor %}
+              </select>
+              <button type="submit" value="click">search</button>
+            </form>
+            
           </div>
           <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
             <h5 class="text-white pl-2">Цена</h5>
-            <h6 style="border: 1px solid rgb(80, 80, 80); padding: 6px 10px 3px 15px; background-color: #ffffff;"><span class="font-weight-bold pr-2">{{logistics_price}}</span> so'm</h6>
+            <h6 style="border: 1px solid rgb(80, 80, 80); padding: 6px 10px 3px 15px; background-color: #ffffff;"><span class="font-weight-bold pr-2">{{logistics_price.price}}</span> so'm</h6>
           </div>
         </div>
       </div>

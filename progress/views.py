@@ -1,7 +1,13 @@
+from itertools import product
+from unicodedata import category
+from urllib import response
+
+from django.http import HttpResponse
 from progress.models import HomeImage, Logistic,Product, Category, Certificate, Gallery, Customer, Seller
 from django.shortcuts import render
 from django.views.generic import TemplateView, DetailView, ListView
-
+import xlwt
+from datetime import datetime
 
 class HomeView(ListView):
     queryset = HomeImage.objects.all()
@@ -52,21 +58,45 @@ class SellerDetailView(DetailView):
 class CatalogConstructionView(ListView):
     queryset = Product.objects.all()
     template_name = 'catalog_construction.html'
-    context_object_name = 'products'
+    context_object_name = 'products1'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['categories'] = Category.objects.filter(parent__name='Строительный')
-        context['sellers'] = Seller.objects.all()
-        context['new_products'] = Product.objects.filter(type='NEW')
-        cat_id = self.request.GET.get('category',None)
-        print(cat_id)
-        if cat_id:
-            products = Product.objects.filter(category=cat_id)
-            context['products']  = products   
-            print(products)
+        if self.request.GET.get('seller', None) and self.request.GET.get('category',None):
+            context['products'] = Product.objects.filter(seller=self.request.GET.get('seller'),category=self.request.GET.get('category',None))
+            print(f"Products ------->  {Product.objects.filter(seller=self.request.GET.get('seller'),category=self.request.GET.get('category',None))}")
+            context['categories'] = Category.objects.filter(products__seller=self.request.GET.get('seller', None))
+            context['sellers'] = Seller.objects.all()
+        elif self.request.GET.get('seller', None):
+            print(self.request.GET.get('seller', None))
+            context['sellers'] = Seller.objects.all()
+            context['products'] = Product.objects.filter(seller=self.request.GET.get('seller', None))
+            print(F"products -------> {context['products']}")
+            context['categories'] = Category.objects.filter(products__seller=self.request.GET.get('seller', None))
+            context['seller_id']=  Seller.objects.filter(id=self.request.GET.get('seller', None)).first().id
+       
+        elif self.request.GET.get('category',None):
+            context['products'] = Product.objects.filter(category=self.request.GET.get('category',None))
+            print(context['products'])
+            context['categories'] = Category.objects.filter(parent__name='Строительный')
+            context['sellers'] = Seller.objects.filter(products__category__id=self.request.GET.get('category',None))
         else:
-            products = Product.objects.filter(category__parent__name='Строительный')
-            context['products']  = products
+            context['categories'] = Category.objects.filter(parent__name='Строительный')
+            context['sellers'] = Seller.objects.all()
+            context['products'] = Product.objects.all()
+
+        
+        context['new_products'] = Product.objects.filter(type='NEW')
+        # cat_id = self.request.GET.get('category',None)
+        # print(cat_id)
+        # print(self.requets.path)
+        # if cat_id:
+        #     products = Product.objects.filter(category=cat_id)
+        #     context['products']  = products   
+        #     print(products)
+        # else:
+        #     products = Product.objects.filter(category__parent__name='Строительный')
+        #     context['products']  = products
         return context
 
 class CatalogFoodView(ListView):
@@ -75,16 +105,42 @@ class CatalogFoodView(ListView):
     context_object_name = 'products'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['categories'] = Category.objects.filter(parent__name='Продукты')
-        context['sellers'] = Seller.objects.all()
-        context['new_products'] = Product.objects.filter(type='NEW')
-        cat_id = self.request.GET.get('category',None)
-        if cat_id:
-            products = Product.objects.filter(category=cat_id)
-            context['products']  = products  
+        context['categories'] = Category.objects.filter(parent__name='Строительный')
+        if self.request.GET.get('seller', None) and self.request.GET.get('category',None):
+            context['products'] = Product.objects.filter(seller=self.request.GET.get('seller'),category=self.request.GET.get('category',None))
+            print(f"Products ------->  {Product.objects.filter(seller=self.request.GET.get('seller'),category=self.request.GET.get('category',None))}")
+            context['categories'] = Category.objects.filter(products__seller=self.request.GET.get('seller', None))
+            context['sellers'] = Seller.objects.all()
+        elif self.request.GET.get('seller', None):
+            print(self.request.GET.get('seller', None))
+            context['sellers'] = Seller.objects.all()
+            context['products'] = Product.objects.filter(seller=self.request.GET.get('seller', None))
+            print(F"products -------> {context['products']}")
+            context['categories'] = Category.objects.filter(products__seller=self.request.GET.get('seller', None))
+            context['seller_id']=  Seller.objects.filter(id=self.request.GET.get('seller', None)).first().id
+       
+        elif self.request.GET.get('category',None):
+            context['products'] = Product.objects.filter(category=self.request.GET.get('category',None))
+            print(context['products'])
+            context['categories'] = Category.objects.filter(parent__name='Строительный')
+            context['sellers'] = Seller.objects.filter(products__category__id=self.request.GET.get('category',None))
         else:
-            products = Product.objects.filter(category__parent__name='Продукты')
-            context['products']  = products 
+            context['categories'] = Category.objects.filter(parent__name='Строительный')
+            context['sellers'] = Seller.objects.all()
+            context['products'] = Product.objects.all()
+
+        
+        context['new_products'] = Product.objects.filter(type='NEW')
+        # cat_id = self.request.GET.get('category',None)
+        # print(cat_id)
+        # print(self.requets.path)
+        # if cat_id:
+        #     products = Product.objects.filter(category=cat_id)
+        #     context['products']  = products   
+        #     print(products)
+        # else:
+        #     products = Product.objects.filter(category__parent__name='Строительный')
+        #     context['products']  = products
         return context
     
 
@@ -94,16 +150,42 @@ class ProductTextView(ListView):
     context_object_name = 'products'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['categories'] = Category.objects.filter(parent__name = 'Текстильные')
-        context['sellers'] = Seller.objects.all()
-        context['new_products'] = Product.objects.filter(type='NEW')
-        cat_id = self.request.GET.get('category',None)
-        if cat_id:
-            products = Product.objects.filter(category=cat_id)
-            context['products']  = products 
+        context['categories'] = Category.objects.filter(parent__name='Строительный')
+        if self.request.GET.get('seller', None) and self.request.GET.get('category',None):
+            context['products'] = Product.objects.filter(seller=self.request.GET.get('seller'),category=self.request.GET.get('category',None))
+            print(f"Products ------->  {Product.objects.filter(seller=self.request.GET.get('seller'),category=self.request.GET.get('category',None))}")
+            context['categories'] = Category.objects.filter(products__seller=self.request.GET.get('seller', None))
+            context['sellers'] = Seller.objects.all()
+        elif self.request.GET.get('seller', None):
+            print(self.request.GET.get('seller', None))
+            context['sellers'] = Seller.objects.all()
+            context['products'] = Product.objects.filter(seller=self.request.GET.get('seller', None))
+            print(F"products -------> {context['products']}")
+            context['categories'] = Category.objects.filter(products__seller=self.request.GET.get('seller', None))
+            context['seller_id']=  Seller.objects.filter(id=self.request.GET.get('seller', None)).first().id
+       
+        elif self.request.GET.get('category',None):
+            context['products'] = Product.objects.filter(category=self.request.GET.get('category',None))
+            print(context['products'])
+            context['categories'] = Category.objects.filter(parent__name='Строительный')
+            context['sellers'] = Seller.objects.filter(products__category__id=self.request.GET.get('category',None))
         else:
-            products = Product.objects.filter(category__parent__name='Текстильные')
-            context['products']  = products   
+            context['categories'] = Category.objects.filter(parent__name='Строительный')
+            context['sellers'] = Seller.objects.all()
+            context['products'] = Product.objects.all()
+
+        
+        context['new_products'] = Product.objects.filter(type='NEW')
+        # cat_id = self.request.GET.get('category',None)
+        # print(cat_id)
+        # print(self.requets.path)
+        # if cat_id:
+        #     products = Product.objects.filter(category=cat_id)
+        #     context['products']  = products   
+        #     print(products)
+        # else:
+        #     products = Product.objects.filter(category__parent__name='Строительный')
+        #     context['products']  = products
         return context
     
 
@@ -113,9 +195,44 @@ class HowToByView(ListView):
     context_object_name = 'logistics'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['logistics_price'] = self.queryset.filter(place_name=self.request.POST.get('city',None)).first()
-        print(context['logistics'])
+        context['logistics_price'] = self.queryset.filter(id=self.request.GET.get('logistics',None)).last()
+        
+        print(f"get ------> {self.request.GET.get('logistics',None)}")
+        print(f"post -------> {self.request.POST['logistics1']}")
+        if self.request.POST:
+            context['current_name'] = int(self.request.POST['logistics1'])
         return context
+
 
 class ContactView(TemplateView):
     template_name ='contact.html'
+
+
+def export_excelView(request):
+    response = HttpResponse(content_type='application/vnd.ms-excel')
+    response['Content-Disposition'] = 'attachment; filenmae=Expenses' + '.xls'
+    wb = xlwt.Workbook(encoding='utf-8')
+    ws = wb.add_sheet('Expenses')
+    row_num = 0
+    font_style = xlwt.XFStyle()
+    font_style.font.bold = True
+
+    columns = ['Name', 'Тип_измерения', 'Масса_за_1_шт','Цена']
+
+    for col_num in range(len(columns)):
+        ws.write(row_num, col_num, columns[col_num], font_style)
+    
+    font_style = xlwt.XFStyle()
+    
+    cat_id = request.GET.get('category',None)
+    rows = Product.objects.filter(category=5).values_list(
+        'name', 'measurement_type','mass', 'price'
+    )
+    for row in rows:
+        row_num += 1
+
+        for col_num in range(len(row)):
+            ws.write(row_num, col_num, str(row[col_num]), font_style)
+    wb.save(response)
+
+    return response

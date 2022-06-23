@@ -2,7 +2,7 @@ from django.urls import path
 from .views import (
     AboutView, CustomerView, CatalogConstructionView, 
     CatalogFoodView, ContactView, HomeView, SellerDetailView, SellerView, CustomerDetailView,
-    ProductTextView, HowToByView,
+    ProductTextView, HowToByView, export_excelView
 )
 
 urlpatterns = [ 
@@ -17,5 +17,7 @@ urlpatterns = [
     path('product-text/', ProductTextView.as_view(), name='product_text'),
     path('how-to-by/',HowToByView.as_view(), name='how-to-by'),
     path('contact/', ContactView.as_view(), name='contact'),
+
+    path('export-excel/', export_excelView, name='export-excel'),
 
 ]

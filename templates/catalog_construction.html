@@ -23,20 +23,30 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 pt-3 mt-2 border">
+        
         <ul class="list-unstyled p-0 category_ul">
+          <li class="p-2" style="background-color: rgb(228, 228, 228);">Компании</li> 
+          {% for seller in sellers %}  
+          
+          
+          <li class="p-2"><a href="?seller={{seller.id}}">{{ seller.name }}</a></li>
+          {% endfor %}   
+          
+
+        </ul>
+       
+
+        
+        <ul class="list-unstyled category_ul p-0">
           
           <li class="p-2" style="background-color: rgb(228, 228, 228);">Все</li>
-          {% for category in categories %}
-          <li class="p-2" ><a href="/catalog?category={{category.id}}">{{category.name}}</a> </li>
-          {% endfor %}
           
-        </ul>
-        <ul class="list-unstyled category_ul p-0">
-          <li class="p-2" style="background-color: rgb(228, 228, 228);">Компании</li>
-          {% for seller in sellers %}
-          <li class="p-2">{{ seller.name }}</li>
+          {% for category in categories %}
+          <li class="p-2" ><a href="?seller={{seller_id}}&category={{category.id}}">{{category.name}}</a> </li>
           {% endfor %}
+
         </ul>
+        
       </div>
       <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-xl-9">
         <div class="row">
@@ -64,7 +74,7 @@
               <tbody>
                 {% for product in products %}
               <tr>
-                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#produc1">{{product.name}}</td>
+                <td scope="row" data-label="Наименование" data-toggle="modal" data-target="#{{product.slug}}">{{product.name}}</td>
                 <td data-label="Ед. изм">{{ product.measurement_type }}</td>
                 <td data-label="Масса за 1 шт">{{product.mass}}</td>
                 <td data-label="Цена 1 пачки (в долл.США)">{{product.price}}</td>
@@ -75,7 +85,7 @@
               </tbody>
             </table>
             
-              <button class="btn btn-success btn-sm pl-3 pr-3 mt-3" id="downloadexcel">Export excel</button>
+              <a class="btn btn-success btn-sm pl-3 pr-3 mt-3" href="{% url 'export-excel' %}" >Export excel</a>
           </div>
      
        </div>
@@ -88,29 +98,114 @@
 
 <!-- Product modals -->
 <!-- Product 1-->
-<div class="modal fade" id="produc1" tabindex="-1" role="dialog"  aria-hidden="true">
+
+{% for i in products %}
+ <div class="modal fade" id="{{i.slug}}" tabindex="-1" role="dialog" aria-labelledby="productmodalTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header pb-0">
-        <h5 class="modal-title">Fruits name</h5>
-        <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal" aria-label="Close">Закрыть</button>
-      </div>
-      <div class="modal-body p-3">
+    <div class="modal-header">
+      <h5 class="modal-title" id="productmodalTitle">Календарь</h5>
+      <button type="button" class="btn btn-sm btn-outline-danger" data-dismiss="modal">Закрыть</button>
+    </div>
+    <div class="modal-body">
+      <div class="container">
         <div class="row">
-          <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-            <img src="img/products/w10.jpg" width="100%" alt="">
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <img src="{{i.image.url}}" width="100%" alt="">
           </div>
-          <div class="col-6 col-sm-6 col-md-6 col-lg-8 col-xl-8">
-            <p class="font-weight-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione asperiores illum explicabo sapiente vitae similique est voluptate, distinctio, debitis natus dolore unde repellendus, vero architecto pariatur tempora quas iste fugiat?</p>
+          <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+            <table>
+              <thead>
+                </tr>
+                  <th>Тип  </th>
+                  <th>Размер </th>
+                </tr>
+              </thead>
+              <tbody>
+                {% if i.title and i.value %}
+                <tr>
+                  <td scope="row" data-label="Тип бумага">{{i.title}}</td>
+                  <td scope="row" data-label="Размер бумага">{{i.value}}</td>
+                </tr>
+               {% endif %}
+               {% if title1 and i.value1 %}
+               <tr>
+                  <td scope="row" data-label="Тип бумага">{{i.title1}}</td>
+                  <td data-label="Размер бумага">{{i.value1}}</td>
+               </tr>
+               {% endif %}
+
+               {% if i.title2 and  i.value2 %}
+               <tr>
+                  <td data-label="Тип бумага">{{i.title2}}</td>
+                  <td data-label="Размер бумага">{{i.value2}}</td>
+               </tr>
+               {% endif %}
+
+               {% if i.value3 and i.title3 %}
+                  <tr>
+                     <td data-label="Тип бумага">{{i.title3}}</td>
+                     <td data-label="Размер бумага">{{i.value3}}</td>
+                   </tr>
+               {% endif %}
+
+               {% if i.value4 and i.title4 %}
+                    <tr>
+                     <td data-label="Тип бумага">{{i.title4}}</td>
+                     <td data-label="Размер бумага">{{i.value4}}</td>
+                   </tr>
+               {% endif %}
+
+                {% if i.value5 and i.title5 %}
+                    <tr>
+                      <td data-label="Тип бумага">{{i.title5}}</td>
+                      <td data-label="Размер бумага">{{i.value5}}</td>
+                    </tr>
+                {% endif %}
+                {% if i.value6 and i.title6 %}
+                  <tr>
+                    <td data-label="Тип бумага">{{i.title6}}</td>
+                    <td data-label="Размер бумага">{{i.value6}}</td>
+                  </tr>
+                {% endif %}
+                {% if i.value7 and i.title7 %}
+                  <tr>
+                      <td data-label="Тип бумага">{{i.title7}}</td>
+                      <td data-label="Размер бумага">{{i.value7}}</td>
+                    </tr>
+                {% endif %}
+                {% if i.value8 and i.title8 %}
+                  <tr>
+                      <td data-label="Тип бумага">{{i.title8}}</td>
+                      <td data-label="Размер бумага">{{i.value8}}</td>
+                    </tr>
+                {% endif %}
+                {% if i.value9 and i.title9 %}
+                  <tr>
+                      <td data-label="Тип бумага">{{i.title9}}</td>
+                      <td data-label="Размер бумага">{{i.value9}}</td>
+                    </tr>
+                {% endif %}
+                {% if i.value10 and i.title10 %}
+                  <tr>
+                      <td data-label="Тип бумага">{{i.title10}}</td>
+                      <td data-label="Размер бумага">{{i.value10}}</td>
+                  </tr>
+                {% endif %}
+              </tbody>
+            </table>
           </div>
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-             <h6 class="text-success text-left pt-0 pl-2 form-inline">Сумма: 121 сум</h6>
-          </div>
+            <h6 class="text-success text-left pt-0 pl-2 form-inline">{{i.price}} so'm</h6>
+         </div>
         </div>
       </div>
     </div>
-  </div>
 </div>
+</div>
+</div>
+{% endfor %}
+
 
 
 <section class="container-fluid bg-trasparent p-0 p-sm-0 p-md-1 p-lg-3 px-lg-3" style="border-top: 1px solid #b6b6b6;">

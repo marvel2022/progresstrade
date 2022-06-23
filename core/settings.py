@@ -4,7 +4,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k9+q!(&fps4or8i37et4%^rfvib&_2n!16361#9189+q+hvb-t'
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com', '10.10.1.89']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com', '10.10.1.89','192.168.1.32']
 
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
