@@ -1,14 +1,12 @@
 
 from django.contrib.auth.models import Group, User
 from django.contrib import admin
-from progress.models import FileModel, HomeImage, Category, Certificate,PriceExcelModel, Product, Gallery, Seller, Customer, Logistic
+from progress.models import FileModel, HomeImage, Category,Brend ,Certificate,PriceExcelModel, Product, Gallery, Seller, Customer, Logistic
 from import_export.admin import ImportExportModelAdmin
-from mptt.admin import MPTTModelAdmin
-from mptt.forms import MPTTAdminForm
 
-class CategoryAdminForm(MPTTAdminForm):
-    pass
 
+
+admin.site.register(Brend)
 
 
 
@@ -16,9 +14,7 @@ class CategoryAdminForm(MPTTAdminForm):
 class HomeImageAdmin(admin.ModelAdmin):
     pass
 
-@admin.register(Category)
-class CategoryAdmin(MPTTModelAdmin):
-    form = CategoryAdminForm
+admin.site.register(Category)
 
 @admin.register(Seller)
 class SellerAdmin(admin.ModelAdmin):

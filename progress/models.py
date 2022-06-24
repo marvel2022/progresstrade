@@ -1,8 +1,8 @@
-from pyexpat import model
+
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from mptt.models import MPTTModel, TreeForeignKey, TreeManager
-from psycopg2 import DatabaseError
+from mptt.models import MPTTModel
+
 
 class DateTimeMixin(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
@@ -25,8 +25,13 @@ class HomeImage(DateTimeMixin):
         verbose_name_plural = _('Главная Изображения')
 
 
-class Category(DateTimeMixin, MPTTModel):
-    parent = TreeForeignKey('self', on_delete=models.CASCADE, related_name='categories', null=True, blank=True)
+class Category(DateTimeMixin):
+    type = (
+        ('Строительный','Строительный'),
+        ('Продукты', 'Продукты'),
+        ('Текстильные','Текстильные'),
+    )
+    parent = models.CharField(max_length=100, choices=type)
     name = models.CharField(_('Имя'), max_length=100)
     
     def __str__(self):
@@ -36,7 +41,7 @@ class Category(DateTimeMixin, MPTTModel):
         verbose_name = _('Категория')
         verbose_name_plural = _('Категории')
 
-    objects = TreeManager()
+   
 
     
 class Product(DateTimeMixin):
@@ -163,3 +168,14 @@ class PriceExcelModel(DateTimeMixin):
 
     def __str__(self):
         return str(self.id)
+
+class Brend(DateTimeMixin):
+    name = models.CharField(_('Имя'), max_length=100)
+    image = models.ImageField(_('Изображение'), upload_to = 'brend-images')
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = _('Brend')
+        verbose_name_plural = _('Bredns')
