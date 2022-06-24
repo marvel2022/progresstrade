@@ -1,7 +1,7 @@
 
 from django.contrib.auth.models import Group, User
 from django.contrib import admin
-from progress.models import FileModel, HomeImage, Category,Brend ,Certificate,PriceExcelModel, Product, Gallery, Seller, Customer, Logistic
+from progress.models import FileModel,CatalogImage,  HomeImage, Category,Brend ,Certificate,PriceExcelModel, Product, Gallery, Seller, Customer, Logistic
 from import_export.admin import ImportExportModelAdmin
 
 
@@ -35,6 +35,7 @@ admin.site.register(Product)
 
 admin.site.register(Certificate)
 
+admin.site.register(CatalogImage)
 
 admin.site.register(Gallery)
 

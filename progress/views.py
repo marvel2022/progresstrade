@@ -4,7 +4,7 @@ from unicodedata import category
 from urllib import response
 
 from django.http import HttpResponse
-from progress.models import HomeImage, Logistic,Brend, PriceExcelModel,Product, Category, Certificate, Gallery, Customer, Seller
+from progress.models import HomeImage,CatalogImage, Logistic,Brend, PriceExcelModel,Product, Category, Certificate, Gallery, Customer, Seller
 from django.shortcuts import render
 from django.views.generic import TemplateView, DetailView, ListView
 import xlwt
@@ -64,6 +64,7 @@ class CatalogConstructionView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['categories'] = Category.objects.filter(parent='Строительный')
+        context['bacground'] = CatalogImage.objects.filter(name='Строительный').last()
         if self.request.GET.get('seller', None) and self.request.GET.get('category',None):
             context['products'] = Product.objects.filter(seller=self.request.GET.get('seller'),category=self.request.GET.get('category',None))
             print(f"Products ------->  {Product.objects.filter(seller=self.request.GET.get('seller'),category=self.request.GET.get('category',None))}")
@@ -110,6 +111,7 @@ class CatalogFoodView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['categories'] = Category.objects.filter(parent='Продукты')
+        context['bacground'] = CatalogImage.objects.filter(name='Продукты').last()
         if self.request.GET.get('seller', None) and self.request.GET.get('category',None):
             context['products'] = Product.objects.filter(seller=self.request.GET.get('seller'),category=self.request.GET.get('category',None))
             print(f"Products ------->  {Product.objects.filter(seller=self.request.GET.get('seller'),category=self.request.GET.get('category',None))}")
@@ -156,6 +158,8 @@ class ProductTextView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['categories'] = Category.objects.filter(parent='Текстильные')
+
+        context['bacground'] = CatalogImage.objects.filter(name='Текстильные').last()
         if self.request.GET.get('seller', None) and self.request.GET.get('category',None):
             context['products'] = Product.objects.filter(seller=self.request.GET.get('seller'),category=self.request.GET.get('category',None))
             print(f"Products ------->  {Product.objects.filter(seller=self.request.GET.get('seller'),category=self.request.GET.get('category',None))}")
