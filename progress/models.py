@@ -135,7 +135,7 @@ class Customer(DateTimeMixin):
 class Seller(DateTimeMixin):
     name = models.CharField(_('Имя'), max_length=64)
     image = models.ImageField(_('Изображение'), upload_to = 'seller-images')
-    description = models.TextField(_('Text'))
+    
     def __str__(self):
         return self.name
     
@@ -172,7 +172,7 @@ class PriceExcelModel(DateTimeMixin):
 class Brend(DateTimeMixin):
     name = models.CharField(_('Имя'), max_length=100)
     image = models.ImageField(_('Изображение'), upload_to = 'brend-images')
-
+    description = models.TextField(_('Text'))
     def __str__(self):
         return self.name
     
