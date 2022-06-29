@@ -1,0 +1,568 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-30 01:17+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: core/settings.py:100
+msgid "Russian"
+msgstr ""
+
+#: core/settings.py:101
+msgid "English"
+msgstr ""
+
+#: core/settings.py:102
+msgid "Uzbek"
+msgstr ""
+
+#: core/settings.py:103
+msgid "Tajik"
+msgstr ""
+
+#: core/urls.py:9
+msgid "admin/"
+msgstr ""
+
+#: progress/models.py:19
+msgid "Текст"
+msgstr ""
+
+#: progress/models.py:20 progress/models.py:61 progress/models.py:117
+#: progress/models.py:130 progress/models.py:142 progress/models.py:156
+#: progress/models.py:166 progress/models.py:211 progress/models.py:221
+msgid "Изображение"
+msgstr ""
+
+#: progress/models.py:27
+msgid "Главная Изображение"
+msgstr ""
+
+#: progress/models.py:28
+msgid "Главная Изображения"
+msgstr ""
+
+#: progress/models.py:37
+msgid "Родитель"
+msgstr ""
+
+#: progress/models.py:38 progress/models.py:70 progress/models.py:113
+#: progress/models.py:129 progress/models.py:141 progress/models.py:153
+#: progress/models.py:165 progress/models.py:208 progress/models.py:220
+msgid "Имя"
+msgstr ""
+
+#: progress/models.py:44
+msgid "Категория"
+msgstr ""
+
+#: progress/models.py:45
+msgid "Категории"
+msgstr ""
+
+#: progress/models.py:51 progress/models.py:105
+msgid "New"
+msgstr ""
+
+#: progress/models.py:52 progress/models.py:106
+msgid "Popular"
+msgstr ""
+
+#: progress/models.py:55 progress/models.py:108
+msgid "Dollar"
+msgstr ""
+
+#: progress/models.py:56 progress/models.py:109
+msgid "Eur"
+msgstr ""
+
+#: progress/models.py:57 progress/models.py:110
+msgid "Ruble"
+msgstr ""
+
+#: progress/models.py:62 progress/models.py:118
+msgid "Тип цены"
+msgstr ""
+
+#: progress/models.py:63
+msgid "ИД(Code)"
+msgstr ""
+
+#: progress/models.py:64
+msgid "Тип измерения"
+msgstr ""
+
+#: progress/models.py:65 templates/catalog_construction.html:71
+#: templates/catalog_text.html:70
+msgid "Масса за 1 шт"
+msgstr ""
+
+#: progress/models.py:66
+msgid "Вес 1 коробки"
+msgstr ""
+
+#: progress/models.py:67 progress/models.py:115 progress/models.py:176
+#: templates/logistics.html:195
+msgid "Цена"
+msgstr ""
+
+#: progress/models.py:68
+msgid "Slug"
+msgstr ""
+
+#: progress/models.py:69 progress/models.py:116
+#: templates/catalog_construction.html:121 templates/catalog_food.html:117
+#: templates/catalog_text.html:120
+msgid "Тип"
+msgstr ""
+
+#: progress/models.py:72
+msgid "Описание"
+msgstr ""
+
+#: progress/models.py:73 progress/models.py:75
+msgid "Название1"
+msgstr ""
+
+#: progress/models.py:74 progress/models.py:76
+msgid "Ценность1"
+msgstr ""
+
+#: progress/models.py:77
+msgid "Название2"
+msgstr ""
+
+#: progress/models.py:78
+msgid "Ценность2"
+msgstr ""
+
+#: progress/models.py:79
+msgid "Название3"
+msgstr ""
+
+#: progress/models.py:80
+msgid "Ценность3"
+msgstr ""
+
+#: progress/models.py:81
+msgid "Название4"
+msgstr ""
+
+#: progress/models.py:82
+msgid "Ценность4"
+msgstr ""
+
+#: progress/models.py:83
+msgid "Название5"
+msgstr ""
+
+#: progress/models.py:84
+msgid "Ценность5"
+msgstr ""
+
+#: progress/models.py:85
+msgid "Название6"
+msgstr ""
+
+#: progress/models.py:86
+msgid "Ценность6"
+msgstr ""
+
+#: progress/models.py:87
+msgid "Название7"
+msgstr ""
+
+#: progress/models.py:88
+msgid "Ценность7"
+msgstr ""
+
+#: progress/models.py:89
+msgid "Название8"
+msgstr ""
+
+#: progress/models.py:90
+msgid "Ценность8"
+msgstr ""
+
+#: progress/models.py:91
+msgid "Название9"
+msgstr ""
+
+#: progress/models.py:92
+msgid "Ценность9"
+msgstr ""
+
+#: progress/models.py:93
+msgid "Название10"
+msgstr ""
+
+#: progress/models.py:94
+msgid "Ценность10"
+msgstr ""
+
+#: progress/models.py:100
+msgid "Товар"
+msgstr ""
+
+#: progress/models.py:101
+msgid "Товары"
+msgstr ""
+
+#: progress/models.py:124
+msgid "Новый Товар"
+msgstr ""
+
+#: progress/models.py:125
+msgid "Новый Товары"
+msgstr ""
+
+#: progress/models.py:136
+msgid "Сертификат"
+msgstr ""
+
+#: progress/models.py:137
+msgid "Сертификаты"
+msgstr ""
+
+#: progress/models.py:148 templates/about.html:18
+msgid "Галерея"
+msgstr ""
+
+#: progress/models.py:149
+msgid "Галереи"
+msgstr ""
+
+#: progress/models.py:154 progress/models.py:209
+msgid "Text"
+msgstr ""
+
+#: progress/models.py:161 templates/index.html:109
+msgid "Покупатель"
+msgstr ""
+
+#: progress/models.py:162
+msgid "Клиенты"
+msgstr ""
+
+#: progress/models.py:175 templates/logistics.html:179
+msgid "Куда"
+msgstr ""
+
+#: progress/models.py:182 progress/models.py:183
+msgid "Логистика"
+msgstr ""
+
+#: progress/models.py:192
+msgid "Файл продукта"
+msgstr ""
+
+#: progress/models.py:193
+msgid "Файлы продукта"
+msgstr ""
+
+#: progress/models.py:202
+msgid "Kонтрагентов документ"
+msgstr ""
+
+#: progress/models.py:203
+msgid "Kонтрагентов документы"
+msgstr ""
+
+#: progress/models.py:216
+msgid "Спонсор"
+msgstr ""
+
+#: progress/models.py:217
+msgid "Спонсоры"
+msgstr ""
+
+#: progress/models.py:227
+msgid "Каталог Страница Изображение"
+msgstr ""
+
+#: progress/models.py:228
+msgid "Каталог Страница Изображения"
+msgstr ""
+
+#: templates/about.html:11 templates/base.html:189
+msgid "О компании"
+msgstr ""
+
+#: templates/about.html:15 templates/index.html:31
+msgid ""
+"В своей рабое ООО “Progress Trade Exp” основывается на принципах "
+"взаимоуважения, открытости и развития устойчивого взаимовыгодного "
+"сотрудничества.  Ключевой задачей компании является содействие в поиске "
+"иностранного покупателя и сопровождение переговорного процесса до этапа "
+"заключения экспортного контракта, включая подготовку проектов экспортных "
+"контрактов и соглашение а также, разработка предложений по внедрению "
+"наиболее эффективных способов доставки, выпускаемой субъектами "
+"предпринимательства продукии."
+msgstr ""
+
+#: templates/about.html:39
+msgid "Образцы документов для контрагентов у нас."
+msgstr ""
+
+#: templates/about.html:40
+msgid "Скачать"
+msgstr ""
+
+#: templates/base.html:110
+msgid "ГЛАВНАЯ"
+msgstr ""
+
+#: templates/base.html:111 templates/catalog_construction.html:28
+#: templates/catalog_food.html:28 templates/catalog_text.html:28
+msgid "Компании"
+msgstr ""
+
+#: templates/base.html:113 templates/index.html:24
+msgid "О НАС"
+msgstr ""
+
+#: templates/base.html:114 templates/index.html:82 templates/sellers.html:11
+msgid "Производители"
+msgstr ""
+
+#: templates/base.html:115 templates/customers.html:12
+msgid "Покупатели"
+msgstr ""
+
+#: templates/base.html:118
+msgid "ПРОДУКЦИЯ"
+msgstr ""
+
+#: templates/base.html:120
+msgid "Строительные материалы"
+msgstr ""
+
+#: templates/base.html:121
+msgid "Продукты питания"
+msgstr ""
+
+#: templates/base.html:122
+msgid "Текстильные изделия"
+msgstr ""
+
+#: templates/base.html:125
+msgid "логистика"
+msgstr ""
+
+#: templates/base.html:126
+msgid "КОНТАКТЫ"
+msgstr ""
+
+#: templates/base.html:134
+msgid "Language"
+msgstr ""
+
+#: templates/base.html:177
+msgid "Телефон поддержки"
+msgstr ""
+
+#: templates/base.html:179
+msgid "Каждый день"
+msgstr ""
+
+#: templates/base.html:188
+msgid "Компания"
+msgstr ""
+
+#: templates/base.html:190
+msgid "Новости"
+msgstr ""
+
+#: templates/base.html:193
+msgid "Помощь"
+msgstr ""
+
+#: templates/base.html:194
+msgid "Как купить"
+msgstr ""
+
+#: templates/base.html:195
+msgid "Условия оплаты"
+msgstr ""
+
+#: templates/base.html:196
+msgid "Условия доставки"
+msgstr ""
+
+#: templates/base.html:197
+msgid "Гарантия на товар"
+msgstr ""
+
+#: templates/base.html:200
+msgid "Информация"
+msgstr ""
+
+#: templates/base.html:201
+msgid "Бренды"
+msgstr ""
+
+#: templates/base.html:202
+msgid "Вопросы и ответы"
+msgstr ""
+
+#: templates/base.html:203
+msgid "Советы"
+msgstr ""
+
+#: templates/base.html:204
+msgid "Поставщикам"
+msgstr ""
+
+#: templates/base.html:211
+msgid "Все права защищены."
+msgstr ""
+
+#: templates/catalog_construction.html:12
+msgid "Строительный материалы"
+msgstr ""
+
+#: templates/catalog_construction.html:42
+msgid "Все"
+msgstr ""
+
+#: templates/catalog_construction.html:69 templates/catalog_food.html:65
+#: templates/catalog_text.html:68
+msgid "Наименование"
+msgstr ""
+
+#: templates/catalog_construction.html:70 templates/catalog_food.html:66
+#: templates/catalog_text.html:69
+msgid "Ед. изм"
+msgstr ""
+
+#: templates/catalog_construction.html:72 templates/catalog_food.html:68
+msgid "Цена 1 пачки"
+msgstr ""
+
+#: templates/catalog_construction.html:89 templates/catalog_food.html:85
+#: templates/catalog_text.html:88
+msgid "Export excel"
+msgstr ""
+
+#: templates/catalog_construction.html:109 templates/catalog_food.html:105
+#: templates/catalog_text.html:108
+msgid "Закрыть"
+msgstr ""
+
+#: templates/catalog_construction.html:122 templates/catalog_food.html:118
+#: templates/catalog_text.html:121
+msgid "Размер"
+msgstr ""
+
+#: templates/catalog_construction.html:216 templates/catalog_food.html:212
+#: templates/catalog_text.html:215 templates/index.html:44
+msgid "Новинки"
+msgstr ""
+
+#: templates/catalog_food.html:12
+msgid "Продукты материалы"
+msgstr ""
+
+#: templates/catalog_text.html:12
+msgid "Текстильные материалы"
+msgstr ""
+
+#: templates/catalog_text.html:226
+msgid "Info"
+msgstr ""
+
+#: templates/contact.html:11
+msgid "Контакты"
+msgstr ""
+
+#: templates/contact.html:30
+msgid "Адрес компании:"
+msgstr ""
+
+#: templates/contact.html:39
+msgid "Телефоны:"
+msgstr ""
+
+#: templates/customers.html:23 templates/sellers.html:22
+msgid ""
+"Торговая компания Колбасный мир - официальный дистрибьютор колбасной и "
+"мясной продукции. Она была основана в 1997 году, с тех пор успешно "
+"развивается и расширяет свой ассортиментный перечень, чтобы иметь "
+"возможность удовлетворить потребности самого взыскательного клиента. Наши "
+"клиенты заключают всего 1 договор и получают продукцию от 40 известных "
+"мясокомбинатов в одном месте. Что существенно уменьшает время от заказа до "
+"получения всей интересующей продукции, а также уменьшает документооборот."
+msgstr ""
+
+#: templates/index.html:77
+msgid "Как мы работаем"
+msgstr ""
+
+#: templates/index.html:88 templates/index.html:115
+msgid "Коннектинг"
+msgstr ""
+
+#: templates/index.html:96
+msgid "Ознакомления с производсвом"
+msgstr ""
+
+#: templates/index.html:104
+msgid "Договор"
+msgstr ""
+
+#: templates/index.html:123
+msgid "Сформирования заявки + логистика"
+msgstr ""
+
+#: templates/index.html:131
+msgid "Контракт"
+msgstr ""
+
+#: templates/index.html:145
+msgid "Популярные"
+msgstr ""
+
+#: templates/logistics.html:161
+msgid "Доставка"
+msgstr ""
+
+#: templates/logistics.html:162
+#, python-format
+msgid ""
+"Количество автотранспорта: Согласно заявок Заказчика; Форма оплаты: 50%% "
+"предоплата в течение 3-х банковских дней с момента подачи заявок, оставшиеся "
+"50%% после подписания сторонами акта выполненных работ и счет-фактуры путем "
+"перечисления на расчетный счет Экспедитора; Норма загрузки: не более 20 тонн "
+"(брутто). Время транспортировки груза: Время исчисляется с момента выезда "
+"груза с пункта отправки. Срок доставки не должен превышать времени, "
+"указанного в заявке. Срок доставки груза: В течении 10 рабочих дней."
+msgstr ""
+
+#: templates/logistics.html:166
+msgid "Узнать цена доставки."
+msgstr ""
+
+#: templates/logistics.html:170
+msgid "Откуда"
+msgstr ""
+
+#: templates/logistics.html:172
+msgid "Узбекистан"
+msgstr ""
+
+#: templates/logistics.html:188
+msgid "Расчет"
+msgstr ""

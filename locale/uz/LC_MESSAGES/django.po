@@ -1,0 +1,584 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-30 01:17+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: core/settings.py:100
+msgid "Russian"
+msgstr "Ruscha"
+
+#: core/settings.py:101
+msgid "English"
+msgstr "Inglizcha"
+
+#: core/settings.py:102
+msgid "Uzbek"
+msgstr "Uzbek"
+
+#: core/settings.py:103
+msgid "Tajik"
+msgstr "Tajik"
+
+#: core/urls.py:9
+msgid "admin/"
+msgstr "admin/"
+
+#: progress/models.py:19
+msgid "Текст"
+msgstr "Matn"
+
+#: progress/models.py:20 progress/models.py:61 progress/models.py:117
+#: progress/models.py:130 progress/models.py:142 progress/models.py:156
+#: progress/models.py:166 progress/models.py:211 progress/models.py:221
+msgid "Изображение"
+msgstr "Rasm"
+
+#: progress/models.py:27
+msgid "Главная Изображение"
+msgstr "Asosiy Rasm"
+
+#: progress/models.py:28
+msgid "Главная Изображения"
+msgstr "Asosiy Rasmlar"
+
+#: progress/models.py:37
+msgid "Родитель"
+msgstr "Ota-ona"
+
+#: progress/models.py:38 progress/models.py:70 progress/models.py:113
+#: progress/models.py:129 progress/models.py:141 progress/models.py:153
+#: progress/models.py:165 progress/models.py:208 progress/models.py:220
+msgid "Имя"
+msgstr "Ism"
+
+#: progress/models.py:44
+msgid "Категория"
+msgstr "Kategoriya"
+
+#: progress/models.py:45
+msgid "Категории"
+msgstr "Kategoriyalar"
+
+#: progress/models.py:51 progress/models.py:105
+msgid "New"
+msgstr "Yangi"
+
+#: progress/models.py:52 progress/models.py:106
+msgid "Popular"
+msgstr "Ommabop"
+
+#: progress/models.py:55 progress/models.py:108
+msgid "Dollar"
+msgstr "Dollar"
+
+#: progress/models.py:56 progress/models.py:109
+msgid "Eur"
+msgstr "Eur"
+
+#: progress/models.py:57 progress/models.py:110
+msgid "Ruble"
+msgstr "Ruble"
+
+#: progress/models.py:62 progress/models.py:118
+msgid "Тип цены"
+msgstr "Narx turi"
+
+#: progress/models.py:63
+msgid "ИД(Code)"
+msgstr "Id(kod)"
+
+#: progress/models.py:64
+msgid "Тип измерения"
+msgstr "O'lchov turi"
+
+#: progress/models.py:65 templates/catalog_construction.html:71
+#: templates/catalog_text.html:70
+msgid "Масса за 1 шт"
+msgstr "1 dona uchun vazn"
+
+#: progress/models.py:66
+msgid "Вес 1 коробки"
+msgstr "1 qutining og'irligi"
+
+#: progress/models.py:67 progress/models.py:115 progress/models.py:176
+#: templates/logistics.html:195
+msgid "Цена"
+msgstr "Narx"
+
+#: progress/models.py:68
+msgid "Slug"
+msgstr "Slug"
+
+#: progress/models.py:69 progress/models.py:116
+#: templates/catalog_construction.html:121 templates/catalog_food.html:117
+#: templates/catalog_text.html:120
+msgid "Тип"
+msgstr "Turi"
+
+#: progress/models.py:72
+msgid "Описание"
+msgstr "Ta'rifi"
+
+#: progress/models.py:73 progress/models.py:75
+msgid "Название1"
+msgstr "Ism 1"
+
+#: progress/models.py:74 progress/models.py:76
+msgid "Ценность1"
+msgstr "Qiymat 1"
+
+#: progress/models.py:77
+msgid "Название2"
+msgstr "Ism 2"
+
+#: progress/models.py:78
+msgid "Ценность2"
+msgstr "Qiymat 2"
+
+#: progress/models.py:79
+msgid "Название3"
+msgstr "Ism 3"
+
+#: progress/models.py:80
+msgid "Ценность3"
+msgstr "Qiymat 3"
+
+#: progress/models.py:81
+msgid "Название4"
+msgstr "Ism 4"
+
+#: progress/models.py:82
+msgid "Ценность4"
+msgstr "Qiymat 4"
+
+#: progress/models.py:83
+msgid "Название5"
+msgstr "Ism 5"
+
+#: progress/models.py:84
+msgid "Ценность5"
+msgstr "Qiymat 5"
+
+#: progress/models.py:85
+msgid "Название6"
+msgstr "Ism 6"
+
+#: progress/models.py:86
+msgid "Ценность6"
+msgstr "Qiymat 6"
+
+#: progress/models.py:87
+msgid "Название7"
+msgstr "Ism 7"
+
+#: progress/models.py:88
+msgid "Ценность7"
+msgstr "Qiymat 7"
+
+#: progress/models.py:89
+msgid "Название8"
+msgstr "Ism 8"
+
+#: progress/models.py:90
+msgid "Ценность8"
+msgstr "Qiymat 8"
+
+#: progress/models.py:91
+msgid "Название9"
+msgstr "Ism 9"
+
+#: progress/models.py:92
+msgid "Ценность9"
+msgstr "Qiymat 9"
+
+#: progress/models.py:93
+msgid "Название10"
+msgstr "Ism 10"
+
+#: progress/models.py:94
+msgid "Ценность10"
+msgstr "Qiymat 10"
+
+#: progress/models.py:100
+msgid "Товар"
+msgstr ""
+
+#: progress/models.py:101
+msgid "Товары"
+msgstr "Mahsulot"
+
+#: progress/models.py:124
+msgid "Новый Товар"
+msgstr "Yangi Mahsulot"
+
+#: progress/models.py:125
+msgid "Новый Товары"
+msgstr "Yangi mahsulotlar"
+
+#: progress/models.py:136
+msgid "Сертификат"
+msgstr "Sertifikat"
+
+#: progress/models.py:137
+msgid "Сертификаты"
+msgstr "Sertifikatlar"
+
+#: progress/models.py:148 templates/about.html:18
+msgid "Галерея"
+msgstr "Galeriya"
+
+#: progress/models.py:149
+msgid "Галереи"
+msgstr "Galeriyalar"
+
+#: progress/models.py:154 progress/models.py:209
+msgid "Text"
+msgstr "Matn"
+
+#: progress/models.py:161 templates/index.html:109
+msgid "Покупатель"
+msgstr "Xaridor"
+
+#: progress/models.py:162
+msgid "Клиенты"
+msgstr "Mijozlar"
+
+#: progress/models.py:175 templates/logistics.html:179
+msgid "Куда"
+msgstr "Qayerdan"
+
+#: progress/models.py:182 progress/models.py:183
+msgid "Логистика"
+msgstr "Logistika"
+
+#: progress/models.py:192
+msgid "Файл продукта"
+msgstr "Fayl Mahsuloti"
+
+#: progress/models.py:193
+msgid "Файлы продукта"
+msgstr "Fayl Mahsulotlari"
+
+#: progress/models.py:202
+msgid "Kонтрагентов документ"
+msgstr "Qarama-qarshi tomonlar hujjati"
+
+#: progress/models.py:203
+msgid "Kонтрагентов документы"
+msgstr "Qarama-qarshi tomonlar hujjatlari"
+
+#: progress/models.py:216
+msgid "Спонсор"
+msgstr "Xomiy"
+
+#: progress/models.py:217
+msgid "Спонсоры"
+msgstr "Xomiylar"
+
+#: progress/models.py:227
+msgid "Каталог Страница Изображение"
+msgstr "Katalog sahifasi tasviri"
+
+#: progress/models.py:228
+msgid "Каталог Страница Изображения"
+msgstr "Katalog sahifasi tasvirlari"
+
+#: templates/about.html:11 templates/base.html:189
+msgid "О компании"
+msgstr "Kompaniya haqida"
+
+#: templates/about.html:15 templates/index.html:31
+msgid ""
+"В своей рабое ООО “Progress Trade Exp” основывается на принципах "
+"взаимоуважения, открытости и развития устойчивого взаимовыгодного "
+"сотрудничества.  Ключевой задачей компании является содействие в поиске "
+"иностранного покупателя и сопровождение переговорного процесса до этапа "
+"заключения экспортного контракта, включая подготовку проектов экспортных "
+"контрактов и соглашение а также, разработка предложений по внедрению "
+"наиболее эффективных способов доставки, выпускаемой субъектами "
+"предпринимательства продукии."
+msgstr ""
+"Progress Trade Exp MChJ o'z faoliyatida  tamoyillariga asoslanadi."
+"O'zaro hurmat, ochiqlik va barqaror o'zaro manfaatli rivojlanish"
+"hamkorlik. Kompaniyaning asosiy vazifasi qidiruvda yordam berishdir"
+"xorijiy xaridor va muzokaralar jarayonini bosqichga qadar qo'llab-quvvatlash"
+"eksport shartnomasini tuzish, shu jumladan eksport loyihalarini tayyorlash"
+"shartnomalar va bitimlar, shuningdek amalga oshirish bo'yicha takliflar ishlab chiqish"
+"sub'ektlar tomonidan ishlab chiqarilgan eng samarali etkazib berish vositasi"
+"Mahsulot tadbirkorligi."
+
+#: templates/about.html:39
+msgid "Образцы документов для контрагентов у нас."
+msgstr "Bizda kontragentlar uchun hujjatlar namunalari mavjud."
+
+#: templates/about.html:40
+msgid "Скачать"
+msgstr "Yuklab olish"
+
+#: templates/base.html:110
+msgid "ГЛАВНАЯ"
+msgstr "ASOSIY"
+
+#: templates/base.html:111 templates/catalog_construction.html:28
+#: templates/catalog_food.html:28 templates/catalog_text.html:28
+msgid "Компании"
+msgstr "Kompaniya"
+
+#: templates/base.html:113 templates/index.html:24
+msgid "О НАС"
+msgstr "Kompaniya haqida"
+
+#: templates/base.html:114 templates/index.html:82 templates/sellers.html:11
+msgid "Производители"
+msgstr "Ishlab chiqaruvchilar"
+
+#: templates/base.html:115 templates/customers.html:12
+msgid "Покупатели"
+msgstr "Xaridorlar"
+
+#: templates/base.html:118
+msgid "ПРОДУКЦИЯ"
+msgstr "Mahsulot"
+
+#: templates/base.html:120
+msgid "Строительные материалы"
+msgstr "Qurilish mollari"
+
+#: templates/base.html:121
+msgid "Продукты питания"
+msgstr "Oziq-ovqat maxsulotlari"
+
+#: templates/base.html:122
+msgid "Текстильные изделия"
+msgstr "To'qimachilik mahsulotlari"
+
+#: templates/base.html:125
+msgid "логистика"
+msgstr "Logistika"
+
+#: templates/base.html:126
+msgid "КОНТАКТЫ"
+msgstr "ALOQALAR"
+
+#: templates/base.html:134
+msgid "Language"
+msgstr "Til"
+
+#: templates/base.html:177
+msgid "Телефон поддержки"
+msgstr "Telefonni qo'llab-quvvatlash"
+
+#: templates/base.html:179
+msgid "Каждый день"
+msgstr "Har kuni"
+
+#: templates/base.html:188
+msgid "Компания"
+msgstr "Kompaniya"
+
+#: templates/base.html:190
+msgid "Новости"
+msgstr "Yangiliklar"
+
+#: templates/base.html:193
+msgid "Помощь"
+msgstr "Yordam bering"
+
+#: templates/base.html:194
+msgid "Как купить"
+msgstr "Qanday qilib sotib olish kerak"
+
+#: templates/base.html:195
+msgid "Условия оплаты"
+msgstr "To'lov shartlari"
+
+#: templates/base.html:196
+msgid "Условия доставки"
+msgstr "Yetkazib berish shartlari"
+
+#: templates/base.html:197
+msgid "Гарантия на товар"
+msgstr "Mahsulot kafolati"
+
+#: templates/base.html:200
+msgid "Информация"
+msgstr "Ma`lumot"
+
+#: templates/base.html:201
+msgid "Бренды"
+msgstr "Brendlar"
+
+#: templates/base.html:202
+msgid "Вопросы и ответы"
+msgstr "Savol va Javob"
+
+#: templates/base.html:203
+msgid "Советы"
+msgstr "Maslahatlar"
+
+#: templates/base.html:204
+msgid "Поставщикам"
+msgstr "Yetkazib beruvchilar"
+
+#: templates/base.html:211
+msgid "Все права защищены."
+msgstr "Barcha huquqlar himoyalangan."
+
+#: templates/catalog_construction.html:12
+msgid "Строительный материалы"
+msgstr "Qurilish materiallari"
+
+#: templates/catalog_construction.html:42
+msgid "Все"
+msgstr "Hammasi"
+
+#: templates/catalog_construction.html:69 templates/catalog_food.html:65
+#: templates/catalog_text.html:68
+msgid "Наименование"
+msgstr "Nomi"
+
+#: templates/catalog_construction.html:70 templates/catalog_food.html:66
+#: templates/catalog_text.html:69
+msgid "Ед. изм"
+msgstr ""
+
+#: templates/catalog_construction.html:72 templates/catalog_food.html:68
+msgid "Цена 1 пачки"
+msgstr "1 paket uchun narx"
+
+#: templates/catalog_construction.html:89 templates/catalog_food.html:85
+#: templates/catalog_text.html:88
+msgid "Export excel"
+msgstr "Excelni eksport qilish"
+
+#: templates/catalog_construction.html:109 templates/catalog_food.html:105
+#: templates/catalog_text.html:108
+msgid "Закрыть"
+msgstr "Chiqish"
+
+#: templates/catalog_construction.html:122 templates/catalog_food.html:118
+#: templates/catalog_text.html:121
+msgid "Размер"
+msgstr "O'lcham"
+
+#: templates/catalog_construction.html:216 templates/catalog_food.html:212
+#: templates/catalog_text.html:215 templates/index.html:44
+msgid "Новинки"
+msgstr "Yangi"
+
+#: templates/catalog_food.html:12
+msgid "Продукты материалы"
+msgstr "Mahsulotlar materiallari"
+
+#: templates/catalog_text.html:12
+msgid "Текстильные материалы"
+msgstr "To'qimachilik materiallari"
+
+#: templates/catalog_text.html:226
+msgid "Info"
+msgstr "Malumot"
+
+#: templates/contact.html:11
+msgid "Контакты"
+msgstr "Kontaktlar"
+
+#: templates/contact.html:30
+msgid "Адрес компании:"
+msgstr "Kompaniya manzili:"
+
+#: templates/contact.html:39
+msgid "Телефоны:"
+msgstr "Телефоны"
+
+#: templates/customers.html:23 templates/sellers.html:22
+msgid ""
+"Торговая компания Колбасный мир - официальный дистрибьютор колбасной и "
+"мясной продукции. Она была основана в 1997 году, с тех пор успешно "
+"развивается и расширяет свой ассортиментный перечень, чтобы иметь "
+"возможность удовлетворить потребности самого взыскательного клиента. Наши "
+"клиенты заключают всего 1 договор и получают продукцию от 40 известных "
+"мясокомбинатов в одном месте. Что существенно уменьшает время от заказа до "
+"получения всей интересующей продукции, а также уменьшает документооборот."
+msgstr ""
+"Sausage world savdo kompaniyasi - kolbasa va rasmiy distribyutor"
+"go'sht mahsulotlari. 1997 yilda tashkil etilgan, o'shandan beri muvaffaqiyatli "
+"bo'lishi uchun o'z assortimenti ro'yxatini ishlab chiqmoqda va kengaytirmoqda"
+"eng talabchan mijozning ehtiyojlarini qondirish qobiliyati. Bizning "
+"mijozlar atigi 1 ta shartnoma tuzadilar va 40 ta taniqli mahsulotlarni oladilar"
+"Bir joyda go'shtni qayta ishlash zavodlari. Bu buyurtma berishdan gacha bo'lgan vaqtni sezilarli darajada qisqartiradi."
+"Qiziqarli barcha mahsulotlarni olish, shuningdek, hujjatlarni qisqartirish."
+
+#: templates/index.html:77
+msgid "Как мы работаем"
+msgstr "Biz qanday ishlaymiz"
+
+#: templates/index.html:88 templates/index.html:115
+msgid "Коннектинг"
+msgstr "Ulanmoqda"
+
+#: templates/index.html:96
+msgid "Ознакомления с производсвом"
+msgstr "Ishlab chiqarishga kirish"
+
+#: templates/index.html:104
+msgid "Договор"
+msgstr "Shartnoma"
+
+#: templates/index.html:123
+msgid "Сформирования заявки + логистика"
+msgstr "Arizalarni shakllantirish + Logistika"
+
+#: templates/index.html:131
+msgid "Контракт"
+msgstr "Shartnoma"
+
+#: templates/index.html:145
+msgid "Популярные"
+msgstr "Mashhur"
+
+#: templates/logistics.html:161
+msgid "Доставка"
+msgstr "Yetkazib berish"
+
+#: templates/logistics.html:162
+#, python-format
+msgid ""
+"Количество автотранспорта: Согласно заявок Заказчика; Форма оплаты: 50%% "
+"предоплата в течение 3-х банковских дней с момента подачи заявок, оставшиеся "
+"50%% после подписания сторонами акта выполненных работ и счет-фактуры путем "
+"перечисления на расчетный счет Экспедитора; Норма загрузки: не более 20 тонн "
+"(брутто). Время транспортировки груза: Время исчисляется с момента выезда "
+"груза с пункта отправки. Срок доставки не должен превышать времени, "
+"указанного в заявке. Срок доставки груза: В течении 10 рабочих дней."
+msgstr ""
+
+#: templates/logistics.html:166
+msgid "Узнать цена доставки."
+msgstr "Yuk tashish narxini bilib oling."
+
+#: templates/logistics.html:170
+msgid "Откуда"
+msgstr "Qayerga"
+
+#: templates/logistics.html:172
+msgid "Узбекистан"
+msgstr "O'zbekiston"
+
+#: templates/logistics.html:188
+msgid "Расчет"
+msgstr "Hisoblash"

@@ -1,6 +1,6 @@
 {% extends 'base.html' %} 
 {% load static %}
-
+{% load i18n %}
 
 {% block content %} 
  
@@ -21,14 +21,14 @@
     <div class="container ">
       <div class="row pt-5 pb-5">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-          <h2 class="font-weight-bold text-dark">О НАС</h2>
+          <h2 class="font-weight-bold text-dark">{% trans 'О НАС' %}</h2>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 wow slideInLeft">
           <img src="{% static 'img/bg/about.jpg' %}" width="80%" height="350" alt="about company image" >
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 wow slideInRight">
           <h6 class="pb-3 pt-3 font-weight-normal text-justify text-dark">
-            В своей рабое ООО “Progress Trade Exp” основывается на принципах взаимоуважения, открытости и развития устойчивого взаимовыгодного сотрудничества.  Ключевой задачей компании является содействие в поиске иностранного покупателя и сопровождение переговорного процесса до этапа заключения экспортного контракта, включая подготовку проектов экспортных контрактов и соглашение а также, разработка предложений по внедрению наиболее эффективных способов доставки, выпускаемой субъектами предпринимательства продукии.</h6>
+            {% trans 'В своей рабое ООО “Progress Trade Exp” основывается на принципах взаимоуважения, открытости и развития устойчивого взаимовыгодного сотрудничества.  Ключевой задачей компании является содействие в поиске иностранного покупателя и сопровождение переговорного процесса до этапа заключения экспортного контракта, включая подготовку проектов экспортных контрактов и соглашение а также, разработка предложений по внедрению наиболее эффективных способов доставки, выпускаемой субъектами предпринимательства продукии.' %}</h6>
           <h4 class="text-right"><a href="{% url 'about' %}" class="btn text-dark" style="border: 3px solid #ddd; border-radius: 25px;">Подробнее</a></h4>
         </div>
      
@@ -41,7 +41,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center pb-2">
-        <h3 class="font-weight-bold pt-4" style="color: #000000;">Новинки</h3>
+        <h3 class="font-weight-bold pt-4" style="color: #000000;">{% trans 'Новинки' %}</h3>
         </div>
       </div>
       <div class="row pt-2">		
@@ -74,18 +74,18 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
-            <h2 class="pt-5">Как мы работаем</h2>
+            <h2 class="pt-5">{% trans 'Как мы работаем' %}</h2>
           </div>
         </div>
       </div>
   <div class="container pb-5" style="position: relative;">
-    <h3 class="">Производители</h3>
+    <h3 class="">{% trans 'Производители' %}</h3>
     <div class="row pl-3 pr-3">
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 p-2">
         <div class="media border p-2">
           <h1 class="mt-2 ml-2" style="width: 80px; height: 80px; color: white; font-size: 100xp; padding-top: 10px; padding-bottom: 10px; text-align: center; border: 1px solid #fff;">1</h1>
           <div class="media-body pl-3 pt-2 pb-2">
-            <h6 class=" font-weight-normal pt-4">Коннектинг</h6>
+            <h6 class=" font-weight-normal pt-4">{% trans 'Коннектинг' %}</h6>
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
         <div class="media border p-2">
           <h1 class="mt-2 ml-2" style="width: 80px; height: 80px; color: white; font-size: 100xp; padding-top: 10px; padding-bottom: 10px; text-align: center; border: 1px solid #fff;">2</h1>
           <div class="media-body pl-3 pt-2 pb-2">
-            <h6 class=" font-weight-normal pt-2">Ознакомления с производсвом</h6>
+            <h6 class=" font-weight-normal pt-2">{% trans 'Ознакомления с производсвом' %}</h6>
           </div>
         </div>
       </div>
@@ -101,18 +101,18 @@
         <div class="media border p-2">
           <h1 class="mt-2 ml-2" style="width: 80px; height: 80px; color: white; font-size: 100xp; padding-top: 10px; padding-bottom: 10px; text-align: center; border: 1px solid #fff;">3</h1>
           <div class="media-body pl-3 pt-2 pb-2">
-            <h6 class=" font-weight-normal pt-4">Договор</h6>
+            <h6 class=" font-weight-normal pt-4">{% trans 'Договор' %}</h6>
           </div>
         </div>
       </div>
     </div>
-    <h3 class="pt-5">Покупатель</h3>
+    <h3 class="pt-5">{% trans 'Покупатель' %}</h3>
     <div class="row pl-3 pr-3">
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 p-2">
         <div class="media border p-2">
           <h1 class="mt-2 ml-2" style="width: 80px; height: 80px; color: white; font-size: 100xp; padding-top: 10px; padding-bottom: 10px; text-align: center; border: 1px solid #fff;">1</h1>
           <div class="media-body pl-3 pt-2 pb-2">
-            <h6 class=" font-weight-normal pt-4">Коннектинг</h6>
+            <h6 class=" font-weight-normal pt-4">{% trans 'Коннектинг' %}</h6>
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@
         <div class="media border p-2">
           <h1 class="mt-2 ml-2" style="width: 80px; height: 80px; color: white; font-size: 100xp; padding-top: 10px; padding-bottom: 10px; text-align: center; border: 1px solid #fff;">2</h1>
           <div class="media-body pl-3 pt-2 pb-2">
-            <h6 class=" font-weight-normal pt-3">Сформирования заявки + логистика</h6>
+            <h6 class=" font-weight-normal pt-3">{% trans 'Сформирования заявки + логистика' %}</h6>
           </div>
         </div>
       </div>
@@ -128,7 +128,7 @@
         <div class="media border p-2">
           <h1 class="mt-2 ml-2" style="width: 80px; height: 80px; color: white; font-size: 100xp; padding-top: 10px; padding-bottom: 10px; text-align: center; border: 1px solid #fff;">3</h1>
           <div class="media-body pl-3 pt-2 pb-2">
-            <h6 class=" font-weight-normal pt-4">Контракт</h6>
+            <h6 class=" font-weight-normal pt-4">{% trans 'Контракт' %}</h6>
           </div>
         </div>
       </div>
@@ -142,7 +142,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-        <h3 class="font-weight-bold pb-0 pt-5" style="color: #000000;">Популярные</h3>
+        <h3 class="font-weight-bold pb-0 pt-5" style="color: #000000;">{% trans 'Популярные' %}</h3>
         </div>
       </div>
       <div class="row">	
@@ -151,7 +151,7 @@
           <div class="card"> <img src="{{ pop_pro.image.url }}" width="100$" height="250" class="card-img-top" alt="...">
             {% if pop_pro.type == 'POP' %} <div class="label-top shadow-sm">popular</div> {% endif %}
             <div class="card-body">
-              <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> {{product.price}}{% if product.price_type == 'DOL' %} $ {% endif %}</span>
+              <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;"> {{pop_pro.price}}{% if product.price_type == 'DOL' %} $ {% endif %}</span>
               <h5 class="card-title h6 pt-2">{{pop_pro.name}}</h5>
               <div class="text-right"><a class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;" href="{% url 'catalog-construction' %}">Info</a></div>
             </div>

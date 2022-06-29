@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% block content %} 
 
@@ -9,7 +9,7 @@
       <div class="container pt-5 pb-5">
         <div class="row pt-5 pb-5">
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-left">
-            <h1 class="text-white font-weight-bold text_h1">Продукты материалы</h1>
+            <h1 class="text-white font-weight-bold text_h1">{% trans 'Продукты материалы' %}</h1>
         </div>
         </div>
       </div>
@@ -25,7 +25,7 @@
       <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 pt-3 mt-2 border">
         
         <ul class="list-unstyled p-0 category_ul">
-          <li class="p-2" style="background-color: rgb(228, 228, 228);">Компании</li> 
+          <li class="p-2" style="background-color: rgb(228, 228, 228);">{% trans 'Компании' %}</li> 
           {% for seller in sellers %} 
           <li class="p-2"><a href="?seller={{seller.id}}">{{ seller.name }}</a></li>
           {% endfor %}   
@@ -62,10 +62,10 @@
             <table id="table">
               <thead>
               <tr>
-                <th scope="col">Наименование</th>
-                <th scope="col">Ед. изм</th>
-                <th scope="col">Масса за 1 шт</th>
-                <th scope="col">Цена 1 пачки <br> (в долл.США)</th>
+                <th scope="col">{% trans 'Наименование' %}</th>
+                <th scope="col">{% trans 'Ед. изм' %}</th>
+                <th scope="col">{5 trans 'Масса за 1 шт' %}</th>
+                <th scope="col">{% trans 'Цена 1 пачки' %} <br> (в долл.США)</th>
               </tr>
               </thead>
               <tbody>
@@ -82,7 +82,7 @@
               </tbody>
             </table>
             
-              <a class="btn btn-success btn-sm pl-3 pr-3 mt-3" href="{% url 'export-excel' %}?category={{cat_id}}" >Export excel</a>
+              <a class="btn btn-success btn-sm pl-3 pr-3 mt-3" href="{% url 'export-excel' %}?category={{cat_id}}" >{% trans 'Export excel' %}</a>
           </div>
      
        </div>
@@ -102,7 +102,7 @@
     <div class="modal-content">
     <div class="modal-header">
       <h5 class="modal-title" id="productmodalTitle">{{i.name}}</h5>
-      <button type="button" class="btn btn-sm btn-outline-danger" data-dismiss="modal">Закрыть</button>
+      <button type="button" class="btn btn-sm btn-outline-danger" data-dismiss="modal">{% trans 'Закрыть' %}</button>
     </div>
     <div class="modal-body">
       <div class="container">
@@ -114,8 +114,8 @@
             <table>
               <thead>
                 </tr>
-                  <th>Тип  </th>
-                  <th>Размер </th>
+                  <th>{% trans 'Тип' %}</th>
+                  <th>{% trans 'Размер' %} </th>
                 </tr>
               </thead>
               <tbody>
@@ -209,7 +209,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-      <h3 class="font-weight-bold pb-2 pt-4" style="color: #000000;">Новинки</h3>
+      <h3 class="font-weight-bold pb-2 pt-4" style="color: #000000;">{% trans 'Новинки' %}</h3>
       </div>
     </div>
     <div class="row">	

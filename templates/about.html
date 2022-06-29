@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% block content %} 
 
@@ -8,14 +8,14 @@
 <div class="container" style="line-height: 35px;">
     <div class="row">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-2 mt-4" style=" color: #7E0644;">
-        <span class="h3 font-weight-bold">О компании</span>
+        <span class="h3 font-weight-bold">{% trans 'О компании' %}</span>
       </div>
 
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0 pt-lg-2">
-            <p class="text-justify font-weight-normal h5" >В своей рабое ООО “Progress Trade Exp” основывается на принципах взаимоуважения, открытости и развития устойчивого взаимовыгодного сотрудничества.  Ключевой задачей компании является содействие в поиске иностранного покупателя и сопровождение переговорного процесса до этапа заключения экспортного контракта, включая подготовку проектов экспортных контрактов и соглашение а также, разработка предложений по внедрению наиболее эффективных способов доставки, выпускаемой субъектами предпринимательства продукии.</p>
+            <p class="text-justify font-weight-normal h5" >{% trans 'В своей рабое ООО “Progress Trade Exp” основывается на принципах взаимоуважения, открытости и развития устойчивого взаимовыгодного сотрудничества.  Ключевой задачей компании является содействие в поиске иностранного покупателя и сопровождение переговорного процесса до этапа заключения экспортного контракта, включая подготовку проектов экспортных контрактов и соглашение а также, разработка предложений по внедрению наиболее эффективных способов доставки, выпускаемой субъектами предпринимательства продукии.' %}</p>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-2 mt-4 text-center" style="border-bottom:1px solid #7E0644; color: #7E0644;">
-          <span class="h3 font-weight-bold">Галерея</span>
+          <span class="h3 font-weight-bold">{% trans 'Галерея' %}</span>
         </div>
         {% for galery in galeries %}
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-2">
@@ -36,8 +36,8 @@
   <div class="container pt-5 pb-5">
     <div class="row">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-right">
-          <h1 class="text-white font-weight-bold text-left pb-3 text_h1">Образцы документов для контрагентов у нас.</h1>
-          <a href="{{ pricefile.upload.url }}" class="btn border font-weight-bold text-white pl-5 pr-5" download>Скачать</a>
+          <h1 class="text-white font-weight-bold text-left pb-3 text_h1">{% trans 'Образцы документов для контрагентов у нас.' %}</h1>
+          <a href="{{ pricefile.upload.url }}" class="btn border font-weight-bold text-white pl-5 pr-5" download>{% trans 'Скачать' %}</a>
       </div>
     </div>
   </div>

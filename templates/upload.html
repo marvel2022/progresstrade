@@ -8,9 +8,9 @@
 
 {% endif  %} 
 
-<form method="post" enctype="multipart/form-data">
+<form method="post" action="?excel" enctype="multipart/form-data">
     {% csrf_token %} 
     <label>Excel file</label>
-    <input type="file"  name="myfile">
+    <input type="file"  name="excel">
     <button type="submit">Upload</button>
 </form> 

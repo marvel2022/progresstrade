@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% block content %} 
 
@@ -9,7 +9,7 @@
       <div class="container pt-5 pb-5">
         <div class="row pt-5 pb-5">
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-left">
-            <h1 class="text-white font-weight-bold text_h1">Строительный материалы</h1>
+            <h1 class="text-white font-weight-bold text_h1">{% trans 'Строительный материалы' %}</h1>
         </div>
         </div>
       </div>
@@ -25,7 +25,7 @@
       <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 pt-3 mt-2 border">
         
         <ul class="list-unstyled p-0 category_ul">
-          <li class="p-2" style="background-color: rgb(228, 228, 228);">Компании</li> 
+          <li class="p-2" style="background-color: rgb(228, 228, 228);">{% trans 'Компании' %}</li> 
           {% for seller in sellers %}  
           
           
@@ -39,7 +39,7 @@
         
         <ul class="list-unstyled category_ul p-0">
           
-          <li class="p-2" style="background-color: rgb(228, 228, 228);">Все</li>
+          <li class="p-2" style="background-color: rgb(228, 228, 228);">{% trans 'Все' %}</li>
           
           {% for category in categories %}
           
@@ -66,10 +66,10 @@
             <table id="table">
               <thead>
               <tr>
-                <th scope="col">Наименование</th>
-                <th scope="col">Ед. изм</th>
-                <th scope="col">Масса за 1 шт</th>
-                <th scope="col">Цена 1 пачки <br> (в долл.США)</th>
+                <th scope="col">{% trans 'Наименование' %}</th>
+                <th scope="col">{% trans 'Ед. изм' %}</th>
+                <th scope="col">{% trans 'Масса за 1 шт' %}</th>
+                <th scope="col">{% trans 'Цена 1 пачки' %} <br> (в долл.США)</th>
               </tr>
               </thead>
               <tbody>
@@ -86,7 +86,7 @@
               </tbody>
             </table>
             
-              <a class="btn btn-success btn-sm pl-3 pr-3 mt-3" href="{% url 'export-excel' %}?category={{cat_id}}" >Export excel</a>
+              <a class="btn btn-success btn-sm pl-3 pr-3 mt-3" href="{% url 'export-excel' %}?category={{cat_id}}" >{% trans 'Export excel' %}</a>
           </div>
      
        </div>
@@ -106,20 +106,20 @@
     <div class="modal-content">
     <div class="modal-header">
       <h5 class="modal-title" id="productmodalTitle">{{i.name}}</h5>
-      <button type="button" class="btn btn-sm btn-outline-danger" data-dismiss="modal">Закрыть</button>
+      <button type="button" class="btn btn-sm btn-outline-danger" data-dismiss="modal">{% trans 'Закрыть' %}</button>
     </div>
     <div class="modal-body">
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <img src="{{i.image.url}}" width="100%" alt="">
+            <img {% if i.image.url %} src="{{i.image.url}}" {% endif %} width="100%" alt="">
           </div>
           <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
             <table>
               <thead>
                 </tr>
-                  <th>Тип  </th>
-                  <th>Размер </th>
+                  <th>{% trans 'Тип' %}</th>
+                  <th>{% trans 'Размер' %} </th>
                 </tr>
               </thead>
               <tbody>
@@ -213,7 +213,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-      <h3 class="font-weight-bold pb-2 pt-4" style="color: #000000;">Новинки</h3>
+      <h3 class="font-weight-bold pb-2 pt-4" style="color: #000000;">{% trans 'Новинки' %}</h3>
       </div>
     </div>
     <div class="row">	
@@ -224,7 +224,7 @@
             <div class="card-body">
               <span class="float-start small font-weight-bold" style="border: 1px solid #ddd; border-radius: 15px; padding: 3px 15px 3px 15px;">{{product.price}}{% if product.price_type == 'DOL' %} $ {% endif %}</span>
             <h5 class="card-title pt-2">{{ product.name }}</h5>
-              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">Info</button></div>
+              <div class="text-right"><button class="btn btn-sm" style="border: 1px solid #ddd; border-radius: 10px; padding: 0px 15px 0px 15px;">{5 trans 'Info' %}</button></div>
             </div>
           </div>
         </div>

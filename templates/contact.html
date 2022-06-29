@@ -1,14 +1,14 @@
 
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% block content %} 
     <section class="container-fluid pl-0 pr-0" style="background-color: #1A5DA6; border-top: 1px solid #ffffff; background-size: cover;">
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-left">
-            <h2 class="text-white font-weight-bold pt-2 pb-1 pl-5">Контакты</h2>
+            <h2 class="text-white font-weight-bold pt-2 pb-1 pl-5">{% trans 'Контакты' %}</h2>
         </div>
         </div>
       </div>
@@ -27,7 +27,7 @@
         <div class="wrapper text-center" style="height: 175px;">
           <h5 class="font-weight-bold pt-2"><i class="fas fa-map-marker-alt fa-2x mr-2"></i></h5>
         <div class="card-body pl-2">
-          <h5>Адрес компании:</h5>
+          <h5>{% trans 'Адрес компании:' %}</h5>
           <small>город Ташкент, Мирзо-Улуғбекский район, Ц-1, улица Ўзбекистон овози. д-21</small>          
         </div>
       </div>        
@@ -36,7 +36,7 @@
         <div class="wrapper border-left border-right text-center" style="height: 175px;">
           <h5 class="font-weight-bold pt-2"><i class="fa fa-phone fa-2x mr-2" style="transform: rotate(90deg);"></i></h5>
         <div class="card-body pl-2">
-          <h5>Телефоны:</h5>
+          <h5>{% trans 'Телефоны:' %}</h5>
           <small>+998 94 655-00-48</small><br>
           <small>+998 90 176-00-05</small>            
         </div>

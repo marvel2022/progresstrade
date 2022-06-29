@@ -1,0 +1,34 @@
+1. Adding type of Languages to the setting.py after LANGUAGE_CODe line.
+   
+   LANGUAGES = (('en', 'English'), ('ru','Russian'),) 
+
+2. Add LocaleMiddelware to among MIDDLEWARES that on  settings.py 
+   it must be after SessionMiddleware and before CommonMiddleware .
+
+   'django.middleware.locale.LocalMiddleWare',
+
+3. Create following the folder structure inside main project directory.On one the line with manage.py file
+   
+   folder/
+       en/
+       uz/
+       ru/
+       ...
+
+4. Add LOCALE_PATHS on settings.py file.
+
+    LOCALE_PATHS = (
+        os.path.join(BASE_DIR, 'locale/'),  
+    ) 
+
+5. Translating Python Code through gettext_lazy()
+    
+    from django.utils.translations import gettext_lazy as _
+ 
+6. Write this command
+    
+    1. django-admin makemessages --all
+    if it is not working 
+    2. python3 manage.py makemessages -l (en,uz,..) -i venv
+
+7.

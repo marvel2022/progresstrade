@@ -1,10 +1,12 @@
+from django import conf
 from pathlib import Path
 import os
+from decouple import config
+from django.utils.translation import gettext_lazy as _
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = 'django-insecure-k9+q!(&fps4or8i37et4%^rfvib&_2n!16361#9189+q+hvb-t'
-DEBUG = True
-
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com', '10.10.1.89','192.168.1.32','progresstrade.uz','www.progresstrade.uz']
+SECRET_KEY = config('SECRET_KEY')
+DEBUG =True
+ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com','192.168.1.32','progresstrade.uz','www.progresstrade.uz']
 
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
@@ -17,12 +19,15 @@ INSTALLED_APPS = [
     'progress',
     'import_export',
     'mptt',
+    'rosetta',
+    'parler',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -50,13 +55,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+        'NAME': config('DB_NAME'),
     }
 }
+
+
+# PostrgeSQL Part 
 
 # DATABASES = {
 #     'default': {
@@ -85,35 +92,41 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+# Multiple Language Part
 
 LANGUAGE_CODE = 'uz-uz'
+
+LANGUAGES = (
+    ('ru', _('Russian')),
+    ('en', _('English')),
+    ('uz', _('Uzbek')),
+    ('tg', _('Tajik')),
+)
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
+
+print(LOCALE_PATHS)
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'ru'},
+        {'code': 'en'},
+        {'code': 'uz'},
+        {'code': 'tg'},
+    ),
+    'default': {
+        'fallback': 'ru',
+        'hide_untranslated': False,
+    }
+}
 
 TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
 
 USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.0/howto/static-files/
-
-
-# STATIC_URL = 'static/'
-
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
-# ]
-
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'static/')
-
-
-# # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
